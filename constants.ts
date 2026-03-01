@@ -1,4 +1,4 @@
-import { Project, ProjectCategory, ProjectStatus, Skill, Review } from './types';
+import { Project, ProjectCategory, ProjectStatus, Skill, Review, ShowcaseItem } from './types';
 import { 
   Terminal, 
   Server, 
@@ -17,6 +17,39 @@ export const SOCIAL_LINKS = {
   discord: "https://discord.gg/jd6JgG6awG",
   email: "mailto:ayrixmc@gmail.com"
 };
+
+export const SHOWCASE_ITEMS: ShowcaseItem[] = [
+  {
+    title: "ArchitectShop",
+    type: "Plugin",
+    description: "A premium Minecraft shop plugin designed for scalability and performance, featuring advanced UI/UX and dynamic economies.",
+    link: "#"
+  },
+  {
+    title: "GenericTags",
+    type: "Plugin",
+    description: "High-performance chat and nameplate tag management system for large-scale Minecraft networks.",
+    link: "#"
+  },
+  {
+    title: "Synclastics.com",
+    type: "Website",
+    description: "Corporate portal for cloud technologies, focusing on clean interface and infrastructure service presentation.",
+    link: "https://synclastics.com"
+  },
+  {
+    title: "Infonix.studio",
+    type: "Website",
+    description: "Creative agency landing page built with modern web technologies and a focus on visual impact.",
+    link: "https://infonix.studio"
+  },
+  {
+    title: "JollyMC Portal",
+    type: "Application",
+    description: "Custom-built application portal for staff and player management for the JollyMC Network.",
+    link: "https://apps.jollymc.fun"
+  }
+];
 
 export const REVIEWS: Review[] = [
   {
@@ -111,28 +144,20 @@ export const PROJECTS: Project[] = [
   }
 ];
 
-// Alias for icon since Lucide doesn't have a specific Docker icon
 const ContainerIcon = Database;
 
 export const SKILLS: Skill[] = [
-  // Languages
   { name: "Java", category: "Language", icon: Code2 },
   { name: "Python", category: "Language", icon: Terminal },
   { name: "TypeScript / JS", category: "Language", icon: Globe },
   { name: "Bash / Shell", category: "Language", icon: Terminal },
-  
-  // Systems & Hosting
   { name: "Linux (Ubuntu/Debian)", category: "System", icon: Server },
   { name: "Docker", category: "System", icon: ContainerIcon }, 
   { name: "Pterodactyl Panel", category: "System", icon: Layout },
   { name: "Nginx / Apache", category: "System", icon: Globe },
-  
-  // Platforms
   { name: "Discord API", category: "Platform", icon: Gamepad2 },
   { name: "Minecraft API (Spigot/Paper)", category: "Platform", icon: Gamepad2 },
   { name: "Cloud Infrastructure", category: "Platform", icon: Cloud },
-  
-  // Software/Tools
   { name: "Git", category: "Software", icon: Code2 },
   { name: "IntelliJ IDEA", category: "Software", icon: Layout },
   { name: "System Administration", category: "Software", icon: Shield },

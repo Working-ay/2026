@@ -21,6 +21,13 @@ export interface Project {
   link?: string;
 }
 
+export interface ShowcaseItem {
+  title: string;
+  type: 'Plugin' | 'Website' | 'Application';
+  description: string;
+  link: string;
+}
+
 export interface Skill {
   name: string;
   category: 'Language' | 'Software' | 'System' | 'Platform';
