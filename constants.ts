@@ -162,3 +162,48 @@ export const SKILLS: Skill[] = [
   { name: "IntelliJ IDEA", category: "Software", icon: Layout },
   { name: "System Administration", category: "Software", icon: Shield },
 ];
+
+export const LEGAL_CONTENT = {
+  tos: {
+    lastUpdated: "March 1, 2026",
+    sections: [
+      {
+        title: "1. Service Terms & Deadlines",
+        content: "By engaging with AyrixMC for development, system administration, or hosting services, you agree to these terms. If AyrixMC is unable to complete a project within the initially agreed-upon timeframe, the client will not be charged for the pending work until the project is fully completed."
+      },
+      {
+        title: "2. Accepted Payment Methods",
+        content: "AyrixMC strictly accepts payments through the following methods: Xoom (for PayPal users), Direct Bank Transfers, Skrill, Payoneer, and Cryptocurrency."
+      },
+      {
+        title: "3. Late Payments & Server Rights",
+        content: "Payments must be made promptly upon project completion or invoice generation. If a payment is delayed for more than 3 days without prior agreement, AyrixMC reserves the absolute right to take administrative action. This includes the right to revoke server access, modify or delete server files, and report the client."
+      },
+      {
+        title: "4. Breach of Trust & Scamming",
+        content: "In the event of a chargeback, scam, or severe breach of trust ('betrayal'), AyrixMC reserves the right to publicly report the offending individual and their server to relevant Minecraft community blacklists, developer networks, and server owners."
+      },
+      {
+        title: "5. Liability & Backups",
+        content: "AyrixMC is not responsible for data loss, server downtime, or security breaches on client-managed infrastructure. We highly recommend clients maintain regular backups for all production environments."
+      }
+    ]
+  },
+  privacy: {
+    lastUpdated: "March 1, 2026",
+    sections: [
+      {
+        title: "1. Data Collection",
+        content: "We collect minimal data necessary for service delivery, including Discord User IDs, Email addresses for communication, and server IP addresses/credentials for configuration purposes."
+      },
+      {
+        title: "2. Third Parties",
+        content: "We do not sell your data. We use industry-standard third-party services like Discord and GitHub for project management and communication."
+      },
+      {
+        title: "3. Security & Access",
+        content: "We implement strict security protocols when handling client credentials (SFTP/SSH/Panel). We require and recommend clients to change all passwords and revoke access keys immediately after our services are completed."
+      }
+    ]
+  }
+};

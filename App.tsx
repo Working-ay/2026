@@ -1,10 +1,11 @@
 import React from 'react';
-import { HashRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import { Navbar } from './components/Navbar';
 import { Section } from './components/Section';
 import { ProjectCard } from './components/ProjectCard';
 import { ReviewCard } from './components/ReviewCard';
-import { PROJECTS, SKILLS, REVIEWS, SOCIAL_LINKS, SHOWCASE_ITEMS } from './constants';
+import { LegalPage } from './components/LegalPage';
+import { PROJECTS, SKILLS, REVIEWS, SOCIAL_LINKS, SHOWCASE_ITEMS, LEGAL_CONTENT } from './constants';
 import { Github, Mail, Disc, ExternalLink } from 'lucide-react';
 
 // Layout component to wrap all pages
@@ -16,11 +17,19 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
         {children}
       </main>
       <footer className="py-24 px-6 text-center border-t border-white/5">
-        <div className="flex justify-center gap-12 mb-12">
+        <div className="flex justify-center gap-12 mb-8">
           <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-white transition-colors"><Github size={20} /></a>
           <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-white transition-colors"><Disc size={20} /></a>
           <a href={SOCIAL_LINKS.email} className="text-gray-600 hover:text-white transition-colors"><Mail size={20} /></a>
         </div>
+        
+        {/* LEGAL LINKS ADDED HERE */}
+        <div className="flex justify-center gap-6 mb-8 font-mono text-[9px] uppercase tracking-widest text-gray-600">
+          <Link to="/tos" className="hover:text-white transition-colors">Terms of Service</Link>
+          <span>/</span>
+          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
+        </div>
+
         <p className="text-gray-800 font-mono text-[10px] uppercase tracking-widest">
           AyrixMC System • {new Date().getFullYear()}
         </p>
@@ -164,6 +173,22 @@ const App: React.FC = () => {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/experience" element={<ExperiencePage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
+          
+          {/* LEGAL ROUTES ADDED HERE */}
+          <Route path="/tos" element={
+            <LegalPage 
+              title="TERMS OF SERVICE" 
+              lastUpdated={LEGAL_CONTENT.tos.lastUpdated} 
+              sections={LEGAL_CONTENT.tos.sections} 
+            />
+          } />
+          <Route path="/privacy" element={
+            <LegalPage 
+              title="PRIVACY POLICY" 
+              lastUpdated={LEGAL_CONTENT.privacy.lastUpdated} 
+              sections={LEGAL_CONTENT.privacy.sections} 
+            />
+          } />
         </Routes>
       </Layout>
     </Router>
