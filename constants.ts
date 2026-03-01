@@ -194,15 +194,15 @@ export const LEGAL_CONTENT = {
     sections: [
       {
         title: "1. Data Collection",
-        content: "We collect minimal data necessary for service delivery, including Discord User IDs, Email addresses for communication, and server IP addresses/credentials for configuration purposes."
+        content: "AyrixMC collect minimal data necessary for service delivery, including Discord User IDs, Email addresses for communication, and server IP addresses/credentials for configuration purposes."
       },
       {
         title: "2. Third Parties",
-        content: "We do not sell your data. We use industry-standard third-party services like Discord and GitHub for project management and communication."
+        content: "AyrixMC do not sell your data. We use industry-standard third-party services like Discord and GitHub for project management and communication."
       },
       {
         title: "3. Security & Access",
-        content: "We implement strict security protocols when handling client credentials (SFTP/SSH/Panel). We require and recommend clients to change all passwords and revoke access keys immediately after our services are completed."
+        content: "AyrixMC implement strict security protocols when handling client credentials (SFTP/SSH/Panel). AyrixMC require and recommend clients to change all passwords and revoke access keys immediately after our services are completed."
       }
     ]
   }
