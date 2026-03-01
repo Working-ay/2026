@@ -44,7 +44,7 @@ const HomePage = () => (
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-3xl pointer-events-none"></div>
     <div className="max-w-4xl w-full text-center relative z-10">
       <p className="font-mono text-xs text-gray-600 mb-8 tracking-[0.3em] uppercase">
-        System Interface v2.0
+        Available for Commissions
       </p>
       <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-10 text-white">
         AYRIX<span className="text-gray-800">MC</span>
