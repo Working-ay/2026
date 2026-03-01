@@ -102,20 +102,20 @@ export const PROJECTS: Project[] = [
   },
   {
     name: "JollySMP",
-    role: "Owner / Lead Developer",
+    role: "Developer",
     description: "A custom Minecraft survival multiplayer experience with unique mechanics.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
   {
-    name: "Vanta Network",
-    role: "Administrator",
+    name: "MapleSMP",
+    role: "Manager",
     description: "Managing community and server infrastructure for a gaming network.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
   {
-    name: "Riva Network",
+    name: "Sky Realms",
     role: "Developer",
     description: "Plugin development and system configuration.",
     status: ProjectStatus.CURRENT,
@@ -130,7 +130,7 @@ export const PROJECTS: Project[] = [
   },
   {
     name: "Boiga SMP",
-    role: "Founder",
+    role: "Developer",
     description: "Previous survival community project.",
     status: ProjectStatus.PAST,
     category: ProjectCategory.MINECRAFT
