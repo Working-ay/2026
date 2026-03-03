@@ -44,7 +44,7 @@ const HomePage = () => (
     <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-3xl pointer-events-none"></div>
     <div className="max-w-4xl w-full text-center relative z-10">
       <p className="font-mono text-xs text-gray-600 mb-8 tracking-[0.3em] uppercase">
-        Available for Commissions
+        System Interface v2.0
       </p>
       <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-10 text-white">
         AYRIX<span className="text-gray-800">MC</span>
@@ -142,7 +142,7 @@ const ExperiencePage = () => (
       <div className="">
         <div className="flex flex-col items-center md:items-start gap-1 mb-3">
           <h3 className="text-xl font-bold text-gray-300">Founder</h3>
-          <span className="font-mono text-xs text-gray-600">@ JollySMP & Boiga SMP</span>
+          <span className="font-mono text-xs text-gray-600">@ JollySMP & CleaveSMP</span>
         </div>
         <p className="text-gray-500 text-sm leading-relaxed max-w-lg mx-auto md:mx-0">
           Established and scaled multiple Minecraft communities. Managed dedicated hardware and custom plugin development.

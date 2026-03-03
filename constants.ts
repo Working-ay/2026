@@ -22,14 +22,20 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     title: "ArchitectShop",
     type: "Plugin",
-    description: "A premium Minecraft shop plugin designed for scalability and performance, featuring advanced UI/UX and dynamic economies.",
+    description: "A premium Minecraft shop plugin designed for scalability and performance, featuring advanced UI/UX and dynamic economies. [COMING SOON]",
+    link: "#"
+  },
+  {
+    title: "AdminLogger",
+    type: "Plugin",
+    description: "Advanced administrative logging and anti-cheat monitoring system designed for high-security Minecraft server environments. [COMING SOON]",
     link: "#"
   },
   {
     title: "GenericTags",
     type: "Plugin",
     description: "High-performance chat and nameplate tag management system for large-scale Minecraft networks.",
-    link: "#"
+    link: "https://builtbybit.com/resources/generictags.93547/"
   },
   {
     title: "Synclastics.com",
@@ -115,16 +121,16 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINECRAFT
   },
   {
-    name: "Sky Realms",
+    name: "MythMC",
     role: "Developer",
-    description: "Plugin development and system configuration.",
+    description: "Development and system configuration.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
   {
     name: "Crit PVP",
-    role: "SysAdmin",
-    description: "Optimizing PvP combat mechanics and server latency.",
+    role: "Manager",
+    description: "Managing PvP combat mechanics and server latency.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
@@ -185,7 +191,11 @@ export const LEGAL_CONTENT = {
       },
       {
         title: "5. Liability & Backups",
-        content: "AyrixMC is not responsible for data loss, server downtime, or security breaches on client-managed infrastructure. We highly recommend clients maintain regular backups for all production environments."
+        content: "AyrixMC is not responsible for data loss, server downtime, or security breaches on client-managed infrastructure. AyrixMC highly recommends clients maintain regular backups for all production environments."
+      },
+      {
+        title: "6. Communication & Response Protocol",
+        content: "If AyrixMC does not reply to your message immediately, you must wait 3-5 days before sending further inquiries. If you consider the delay a scam or any form of misconduct during this window, that is not AyrixMC's fault, and AyrixMC will not be held liable for your interpretation of the response time."
       }
     ]
   },
@@ -194,15 +204,15 @@ export const LEGAL_CONTENT = {
     sections: [
       {
         title: "1. Data Collection",
-        content: "AyrixMC collect minimal data necessary for service delivery, including Discord User IDs, Email addresses for communication, and server IP addresses/credentials for configuration purposes."
+        content: "AyrixMC collects minimal data necessary for service delivery, including Discord User IDs, Email addresses for communication, and server IP addresses/credentials for configuration purposes."
       },
       {
         title: "2. Third Parties",
-        content: "AyrixMC do not sell your data. We use industry-standard third-party services like Discord and GitHub for project management and communication."
+        content: "AyrixMC does not sell your data. AyrixMC uses industry-standard third-party services like Discord and GitHub for project management and communication."
       },
       {
         title: "3. Security & Access",
-        content: "AyrixMC implement strict security protocols when handling client credentials (SFTP/SSH/Panel). AyrixMC require and recommend clients to change all passwords and revoke access keys immediately after our services are completed."
+        content: "AyrixMC implements strict security protocols when handling client credentials (SFTP/SSH/Panel). AyrixMC requires and recommends clients to change all passwords and revoke access keys immediately after AyrixMC's services are completed."
       }
     ]
   }
