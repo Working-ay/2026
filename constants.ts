@@ -53,22 +53,22 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
     title: "JollyMC Portal",
     type: "Application",
     description: "Custom-built application portal for staff and player management for the JollyMC Network.",
-    link: "https://apps.jollymc.fun"
+    link: "https://apps.ayrixmc.fun"
   }
 ];
 
 export const REVIEWS: Review[] = [
   {
-    username: "account._.changed08",
+    username: "azureknightfr",
     rating: 5,
-    content: "AyrixMC is one of the best developers I've worked with. He is a fantastic developer and manager who handles server development perfectly. I can't recommend him enough. Thanks for working with me!",
+    content: "One of the best Configuration Services provided by AyrixMC for my server. Really Appreciated his work and I'll always suggest hiring him as a Developer for your Minecraft Server.",
     date: "1/27/2026"
   },
   {
     username: "bmoneyboy",
     rating: 5,
     content: "Ayrix is an excellent developer. He completes tasks quickly with exceptional care and quality. He's very professional and ensures you're always kept in the loop. I would definitely recommend Ayrix!!",
-    date: "1/27/2026"
+    date: "3/27/2026"
   },
   {
     username: "kasinathan2008",
@@ -77,9 +77,9 @@ export const REVIEWS: Review[] = [
     date: "1/27/2026"
   },
   {
-    username: "hashir_734_1",
+    username: "x0zv_",
     rating: 5,
-    content: "AyrixMC is a wonderful web and Minecraft developer. He recently developed my Minecraft server and website with a stunning theme. It looks amazing and I recommend his services to everyone.",
+    content: "Ayrix does a amazing job when staffing/managing/developing. He goes above and beyond, does great work, does extra without being asked, and is overall very active. I have had nothing but a great time working with him, and I hope I continue to have a great time working with him, as well as any others who work with him in the future!",
     date: "1/27/2026"
   }
 ];
@@ -93,29 +93,29 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.HOSTING
   },
   {
-    name: "Sterro Cloud Hosting",
-    role: "Developer",
-    description: "Backend development and infrastructure management for hosting solutions.",
+    name: "MJF",
+    role: "Manager",
+    description: "Managing MJF community and overseeing server infrastructure.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.HOSTING
   },
   {
-    name: "Play Games Interactive",
-    role: "Team Member",
-    description: "Collaborative development on interactive gaming experiences.",
+    name: "Boiga's Lounge",
+    role: "Youtube Manager",
+    description: "Helping in managing events and media content.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.DEVELOPMENT
   },
   {
-    name: "JollySMP",
+    name: "FuzzMC",
     role: "Developer",
-    description: "A custom Minecraft survival multiplayer experience with unique mechanics.",
+    description: "A custom Minecraft lifesteal server experience with unique mechanics.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
   {
     name: "MapleSMP",
-    role: "Manager",
+    role: "Network Manager & Developer",
     description: "Managing community and server infrastructure for a gaming network.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
