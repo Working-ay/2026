@@ -171,36 +171,44 @@ export const SKILLS: Skill[] = [
 
 export const LEGAL_CONTENT = {
   tos: {
-    lastUpdated: "March 1, 2026",
+    lastUpdated: "April 17, 2026",
     sections: [
       {
-        title: "1. Service Terms & Deadlines",
-        content: "By engaging with AyrixMC for development, system administration, or hosting services, you agree to these terms. If AyrixMC is unable to complete a project within the initially agreed-upon timeframe, the client will not be charged for the pending work until the project is fully completed."
+        title: "1. General Terms",
+        content: "Agreement: By commissioning any development work, you (the Client) agree to these terms. Ignorance of these terms is not a valid excuse for a breach.\n\nService Eligibility: I reserve the right to decline any project without explanation. I will not work on projects that involve illegal activities or malicious intent (e.g., malware, botnets)."
       },
       {
-        title: "2. Accepted Payment Methods",
-        content: "AyrixMC strictly accepts payments through the following methods: Xoom (for PayPal users), Direct Bank Transfers, Skrill, Payoneer, and Cryptocurrency."
+        title: "2. Project Scope & 'Scope Creep'",
+        content: "The Brief: Before work begins, the Client must provide a detailed list of tasks/features and a hard deadline.\n\nScope Creep: Any feature requested after the initial agreement is considered 'extra.' I will provide a separate quote for these additions. I am only obligated to deliver what was listed in the initial agreement.\n\nAccess: The Client must provide all necessary access (SFTP, Panel, API keys) within 24 hours of the project start. Delays in access will result in an automatic extension of the deadline."
       },
       {
-        title: "3. Late Payments & Server Rights",
-        content: "Payments must be made promptly upon project completion or invoice generation. If a payment is delayed for more than 3 days without prior agreement, AyrixMC reserves the absolute right to take administrative action. This includes the right to revoke server access, modify or delete server files, and report the client."
+        title: "3. Payment Policy",
+        content: "The Deposit: A 50% upfront deposit is required for all projects. Work will not begin until the deposit is cleared.\n\nFinal Payment: The remaining 50% must be paid upon project completion but before the final source code or files are delivered.\n\nMethods: Payments are accepted via Payment Request (Credit/Debit) or Crypto. The Client is responsible for any transaction fees."
       },
       {
-        title: "4. Breach of Trust & Scamming",
-        content: "In the event of a chargeback, scam, or severe breach of trust ('betrayal'), AyrixMC reserves the right to publicly report the offending individual and their server to relevant Minecraft community blacklists, developer networks, and server owners."
+        title: "4. Intellectual Property & Licensing",
+        content: "Ownership: I (the Developer) retain full ownership of the source code and logic. The Client is granted a non-exclusive license to use the product on their specific network/server.\n\nRestrictions: Reselling, redistributing, leaking, or 'de-compiling' my work is strictly prohibited. Doing so will result in an immediate blacklist and a report to the wider development community.\n\nPortfolio Rights: I reserve the right to showcase the project in my portfolio and 'Credits' (e.g., a /version or /about command) unless the Client pays an additional NDA (Non-Disclosure) Fee."
       },
       {
-        title: "5. Liability & Backups",
-        content: "AyrixMC is not responsible for data loss, server downtime, or security breaches on client-managed infrastructure. AyrixMC highly recommends clients maintain regular backups for all production environments."
+        title: "5. Refunds & Cancellations",
+        content: "No-Refund Policy: Once work has started, the 50% deposit is non-refundable.\n\nCancellation by Client: If you cancel before 50% of the deadline: I keep the deposit. If you cancel after 50% of the deadline: You are liable for 75% of the total project cost to cover the time invested.\n\nCancellation by Developer: If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client."
       },
       {
-        title: "6. Communication & Response Protocol",
-        content: "If AyrixMC does not reply to your message immediately, you must wait 3-5 days before sending further inquiries. If you consider the delay a scam or any form of misconduct during this window, that is not AyrixMC's fault, and AyrixMC will not be held liable for your interpretation of the response time."
+        title: "6. Technical Support & Compatibility",
+        content: "New Versions: I am not responsible for breaking changes caused by Minecraft version updates (e.g., 1.21 to 1.22) or third-party plugin updates after the project is delivered. Maintenance for new versions requires a new quote."
+      },
+      {
+        title: "7. Blacklist & Termination",
+        content: "Respect: Verbal abuse, harassment, or 'pinging' excessively will result in one warning. A second offense will lead to immediate termination of the service without a refund.\n\nChargebacks: Any attempt to chargeback through PayPal will result in an immediate permanent blacklist and your information being shared with other developers to prevent further fraud."
+      },
+      {
+        title: "NOTICE",
+        content: "If any TOS or Privacy broken by client, I reserve full right to cancel the commissions and future projects."
       }
     ]
   },
   privacy: {
-    lastUpdated: "March 1, 2026",
+    lastUpdated: "April 17, 2026",
     sections: [
       {
         title: "1. Data Collection",
