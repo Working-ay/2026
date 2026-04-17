@@ -191,7 +191,7 @@ export const LEGAL_CONTENT = {
       },
       {
         title: "5. Refunds & Cancellations",
-        content: "No-Refund Policy: Once work has started, the 50% deposit is non-refundable.\n\nCancellation by Client: If you cancel before 50% of the deadline: I keep the deposit. If you cancel after 50% of the deadline: You are liable for 75% of the total project cost to cover the time invested.\n\nCancellation by Developer: If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client."
+        content: "No-Refund Policy:l Once work has started, the 50% deposit is non-refundable.\n\nCancellation by Client: If you cancel before 50% of the deadline: I keep the deposit. If you cancel after 50% of the deadline: You are liable for 75% of the total project cost to cover the time invested.\n\nCancellation by Developer: If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client."
       },
       {
         title: "6. Technical Support & Compatibility",
