@@ -175,35 +175,31 @@ export const LEGAL_CONTENT = {
     sections: [
       {
         title: "1. General Terms",
-        content: "Agreement: By commissioning any development work, you (the Client) agree to these terms. Ignorance of these terms is not a valid excuse for a breach.\n\nService Eligibility: I reserve the right to decline any project without explanation. I will not work on projects that involve illegal activities or malicious intent (e.g., malware, botnets)."
+        content: "**Agreement:** By commissioning any development work, you (the Client) agree to these terms. Ignorance of these terms is not a valid excuse for a breach.\n\n**Service Eligibility:** I reserve the right to decline any project without explanation. I will not work on projects that involve illegal activities or malicious intent (e.g., malware, botnets)."
       },
       {
         title: "2. Project Scope & 'Scope Creep'",
-        content: "The Brief: Before work begins, the Client must provide a detailed list of tasks/features and a hard deadline.\n\nScope Creep: Any feature requested after the initial agreement is considered 'extra.' I will provide a separate quote for these additions. I am only obligated to deliver what was listed in the initial agreement.\n\nAccess: The Client must provide all necessary access (SFTP, Panel, API keys) within 24 hours of the project start. Delays in access will result in an automatic extension of the deadline."
+        content: "**The Brief:** Before work begins, the Client must provide a detailed list of tasks/features and a hard deadline.\n\n**Scope Creep:** Any feature requested after the initial agreement is considered 'extra.' I will provide a separate quote for these additions. I am only obligated to deliver what was listed in the initial agreement.\n\n**Access:** The Client must provide all necessary access (SFTP, Panel, API keys) within 24 hours of the project start. Delays in access will result in an automatic extension of the deadline."
       },
       {
         title: "3. Payment Policy",
-        content: "The Deposit: A 50% upfront deposit is required for all projects. Work will not begin until the deposit is cleared.\n\nFinal Payment: The remaining 50% must be paid upon project completion but before the final source code or files are delivered.\n\nMethods: Payments are accepted via Payment Request (Credit/Debit) or Crypto. The Client is responsible for any transaction fees."
+        content: "**The Deposit:** A 50% upfront deposit is required for all projects. Work will not begin until the deposit is cleared.\n\n**Final Payment:** The remaining 50% must be paid upon project completion but before the final source code or files are delivered.\n\n**Methods:** Payments are accepted via Payment Request (Credit/Debit) or Crypto. The Client is responsible for any transaction fees."
       },
       {
         title: "4. Intellectual Property & Licensing",
-        content: "Ownership: I (the Developer) retain full ownership of the source code and logic. The Client is granted a non-exclusive license to use the product on their specific network/server.\n\nRestrictions: Reselling, redistributing, leaking, or 'de-compiling' my work is strictly prohibited. Doing so will result in an immediate blacklist and a report to the wider development community.\n\nPortfolio Rights: I reserve the right to showcase the project in my portfolio and 'Credits' (e.g., a /version or /about command) unless the Client pays an additional NDA (Non-Disclosure) Fee."
+        content: "**Ownership:** I (the Developer) retain full ownership of the source code and logic. The Client is granted a non-exclusive license to use the product on their specific network/server.\n\n**Restrictions:** Reselling, redistributing, leaking, or 'de-compiling' my work is strictly prohibited. Doing so will result in an immediate blacklist and a report to the wider development community.\n\n**Portfolio Rights:** I reserve the right to showcase the project in my portfolio and 'Credits' (e.g., a /version or /about command) unless the Client pays an additional NDA (Non-Disclosure) Fee."
       },
       {
         title: "5. Refunds & Cancellations",
-        content: "No-Refund Policy:l Once work has started, the 50% deposit is non-refundable.\n\nCancellation by Client: If you cancel before 50% of the deadline: I keep the deposit. If you cancel after 50% of the deadline: You are liable for 75% of the total project cost to cover the time invested.\n\nCancellation by Developer: If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client."
+        content: "**No-Refund Policy:** Once work has started, the 50% deposit is non-refundable.\n\n**Cancellation by Client:** If you cancel before 50% of the deadline, I keep the deposit. If you cancel after 50% of the deadline, you are liable for 75% of the total project cost to cover the time invested.\n\n**Cancellation by Developer:** If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client."
       },
       {
         title: "6. Technical Support & Compatibility",
-        content: "New Versions: I am not responsible for breaking changes caused by Minecraft version updates (e.g., 1.21 to 1.22) or third-party plugin updates after the project is delivered. Maintenance for new versions requires a new quote."
+        content: "**New Versions:** I am not responsible for breaking changes caused by Minecraft version updates (e.g., 1.21 to 1.22) or third-party plugin updates after the project is delivered. Maintenance for new versions requires a new quote."
       },
       {
         title: "7. Blacklist & Termination",
-        content: "Respect: Verbal abuse, harassment, or 'pinging' excessively will result in one warning. A second offense will lead to immediate termination of the service without a refund.\n\nChargebacks: Any attempt to chargeback through PayPal will result in an immediate permanent blacklist and your information being shared with other developers to prevent further fraud."
-      },
-      {
-        title: "NOTICE",
-        content: "If any TOS or Privacy broken by client, I reserve full right to cancel the commissions and future projects."
+        content: "**Respect:** Verbal abuse, harassment, or 'pinging' excessively will result in one warning. A second offense will lead to immediate termination of the service without a refund.\n\n**Chargebacks:** Any attempt to chargeback through PayPal will result in an immediate permanent blacklist and your information being shared with other developers to prevent further fraud.\n\n**NOTICE:** If any TOS or Privacy broken by client, I reserve full right to cancel the commissions and future projects."
       }
     ]
   },
@@ -212,15 +208,15 @@ export const LEGAL_CONTENT = {
     sections: [
       {
         title: "1. Data Collection",
-        content: "AyrixMC collects minimal data necessary for service delivery, including Discord User IDs, Email addresses for communication, and server IP addresses/credentials for configuration purposes."
+        content: "**Collection:** AyrixMC collects minimal data necessary for service delivery, including Discord User IDs, Email addresses, and server credentials for configuration purposes."
       },
       {
         title: "2. Third Parties",
-        content: "AyrixMC does not sell your data. AyrixMC uses industry-standard third-party services like Discord and GitHub for project management and communication."
+        content: "**No Sale:** AyrixMC does not sell your data. We use industry-standard services like Discord and GitHub for project management."
       },
       {
         title: "3. Security & Access",
-        content: "AyrixMC implements strict security protocols when handling client credentials (SFTP/SSH/Panel). AyrixMC requires and recommends clients to change all passwords and revoke access keys immediately after AyrixMC's services are completed."
+        content: "**Safety:** I implement strict protocols when handling client credentials. I highly recommend clients change all passwords immediately after services are completed."
       }
     ]
   }
