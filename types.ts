@@ -48,5 +48,8 @@ export interface NavItem {
 
 export interface TOSCategory {
   title: string;
-  points: { label: string; text: string }[];
+  points: { 
+    label: string; 
+    text: string; 
+  }[];
 }
