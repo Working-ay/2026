@@ -13,9 +13,9 @@ import {
   SHOWCASE_ITEMS, 
   TERMS_OF_SERVICE, 
   PRIVACY_POLICY, 
-  TOS_RESERVATION_CLAUSE,
-  ProjectStatus // Added this to handle sorting logic
+  TOS_RESERVATION_CLAUSE 
 } from './constants';
+import { ProjectStatus } from './types'; // <--- THIS IS THE FIX! Imported from types instead of constants.
 import { Github, Mail, Disc, ExternalLink } from 'lucide-react';
 
 // Layout component to wrap all pages
