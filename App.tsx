@@ -13,7 +13,8 @@ import {
   SHOWCASE_ITEMS, 
   TERMS_OF_SERVICE, 
   PRIVACY_POLICY, 
-  TOS_RESERVATION_CLAUSE 
+  TOS_RESERVATION_CLAUSE,
+  ProjectStatus // Added this to handle sorting logic
 } from './constants';
 import { Github, Mail, Disc, ExternalLink } from 'lucide-react';
 
@@ -73,15 +74,38 @@ const HomePage = () => (
   </section>
 );
 
-const ProjectsPage = () => (
-  <Section id="projects" title="PROJECTS">
-    <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
-      {PROJECTS.map((project, index) => (
-        <ProjectCard key={`${project.name}-${index}`} project={project} />
-      ))}
-    </div>
-  </Section>
-);
+const ProjectsPage = () => {
+  // Logic to separate projects
+  const currentProjects = PROJECTS.filter(p => p.status === ProjectStatus.CURRENT);
+  const endedProjects = PROJECTS.filter(p => p.status === ProjectStatus.PAST);
+
+  return (
+    <Section id="projects" title="PROJECTS">
+      <div className="space-y-24">
+        {/* CURRENT PROJECTS */}
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
+          {currentProjects.map((project, index) => (
+            <ProjectCard key={`${project.name}-${index}`} project={project} />
+          ))}
+        </div>
+
+        {/* ENDED PROJECTS SECTION */}
+        {endedProjects.length > 0 && (
+          <div className="pt-16 border-t border-white/5">
+            <p className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 text-center md:text-left">
+              Completed Engagements
+            </p>
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
+              {endedProjects.map((project, index) => (
+                <ProjectCard key={`${project.name}-${index}`} project={project} />
+              ))}
+            </div>
+          </div>
+        )}
+      </div>
+    </Section>
+  );
+};
 
 const ShowcasePage = () => (
   <Section id="showcase" title="SHOWCASE">
