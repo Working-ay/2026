@@ -81,6 +81,30 @@ export const REVIEWS: Review[] = [
     rating: 5,
     content: "Ayrix does a amazing job when staffing/managing/developing. He goes above and beyond, does great work, does extra without being asked, and is overall very active. I have had nothing but a great time working with him, and I hope I continue to have a great time working with him, as well as any others who work with him in the future!",
     date: "1/27/2026"
+  },
+  {
+    username: "ggs04155",
+    rating: 5,
+    content: "AyrixMC is a very cool guy, made a very good discord bot for my server. Also his Minecraft Development is amazing. Don't forget to hire him in your server.",
+    date: "4/15/2026"
+  },
+  {
+    username: "hashir",
+    rating: 5,
+    content: "AyrixMC is just a wonderful website, minecraft developer and he just developed my minecraft server and my minecraft server's website in a wonderful theme just like a wow. I recommend you all to take service from AyrixMC",
+    date: "4/20/2026"
+  },
+  {
+    username: "kingqavi",
+    rating: 5,
+    content: "Very Hardworking and lovely boi. must try once in life",
+    date: "4/25/2026"
+  },
+  {
+    username: "sylivikx",
+    rating: 5,
+    content: "The best developer I ever saw, literally fixed everything on my server. Hire him now!",
+    date: "5/01/2026"
   }
 ];
 
@@ -188,8 +212,8 @@ export const TERMS_OF_SERVICE: TOSCategory[] = [
   {
     title: "3. Payment Policy",
     points: [
-      { label: "The Deposit", text: "A 50% upfront deposit is required for all projects. Work will not begin until the deposit is cleared." },
-      { label: "Final Payment", text: "The remaining 50% must be paid upon project completion but before the final source code or files are delivered." },
+      { label: "The Deposit", text: "A 70% upfront deposit is required for all projects. Work will not begin until the deposit is cleared." },
+      { label: "Final Payment", text: "The remaining 30% must be paid upon project completion but before the final source code or files are delivered." },
       { label: "Methods", text: "Payments are accepted via Payment Request (Credit/Debit) or Crypto. The Client is responsible for any transaction fees." }
     ]
   },
@@ -204,8 +228,8 @@ export const TERMS_OF_SERVICE: TOSCategory[] = [
   {
     title: "5. Refunds & Cancellations",
     points: [
-      { label: "No-Refund Policy", text: "Once work has started, the 50% deposit is non-refundable." },
-      { label: "Cancellation by Client", text: "If you cancel before 50% of the deadline: I keep the deposit. If you cancel after 50% of the deadline: You are liable for 75% of the total project cost to cover the time invested." },
+      { label: "No-Refund Policy", text: "Once work has started, the 70% deposit is non-refundable." },
+      { label: "Cancellation by Client", text: "If you cancel before 70% of the deadline: I keep the deposit. If you cancel after 70% of the deadline: You are liable for 75% of the total project cost to cover the time invested." },
       { label: "Cancellation by Developer", text: "If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client." }
     ]
   },
