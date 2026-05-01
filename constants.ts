@@ -110,6 +110,20 @@ export const REVIEWS: Review[] = [
 
 export const PROJECTS: Project[] = [
   {
+    name: "DecourMC",
+    role: "Developer",
+    description: "Technical server development and backend infrastructure optimization.",
+    status: ProjectStatus.CURRENT,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
+    name: "Minefire",
+    role: "Developer",
+    description: "Core systems development and custom feature implementation.",
+    status: ProjectStatus.CURRENT,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
     name: "Synclastics Cloud Technologies",
     role: "Director & COO",
     description: "Leading operations and strategic direction for cloud infrastructure services.",
