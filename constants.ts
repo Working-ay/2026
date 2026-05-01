@@ -173,6 +173,48 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINECRAFT
   },
   {
+    name: "ZenithSMP",
+    role: "Developer",
+    description: "Early-stage development and core systems architecture.",
+    status: ProjectStatus.PAST,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
+    name: "Forge Network",
+    role: "Developer",
+    description: "Network infrastructure management and custom plugin implementation.",
+    status: ProjectStatus.PAST,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
+    name: "ClushSMP",
+    role: "Developer",
+    description: "Technical configuration and community server management.",
+    status: ProjectStatus.PAST,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
+    name: "CrimsonChainsSMP",
+    role: "Developer",
+    description: "Custom game mechanics and server-side optimization.",
+    status: ProjectStatus.PAST,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
+    name: "ElysiumMC",
+    role: "Developer",
+    description: "General development and performance tuning for survival gameplay.",
+    status: ProjectStatus.PAST,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
+    name: "HailingMC",
+    role: "Developer",
+    description: "Backend development and system administration services.",
+    status: ProjectStatus.PAST,
+    category: ProjectCategory.MINECRAFT
+  },
+  {
     name: "Cleave SMP",
     role: "Developer",
     description: "Previous survival community project.",
