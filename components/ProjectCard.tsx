@@ -6,7 +6,8 @@ interface ProjectCardProps {
 }
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const isPast = project.status === 'PAST';
+  // Use ProjectStatus.PAST instead of 'PAST'
+  const isPast = project.status === ProjectStatus.PAST;
 
   return (
     <div className={`mb-16 break-inside-avoid transition-opacity duration-300 ${isPast ? 'opacity-50' : 'hover:opacity-80'}`}>

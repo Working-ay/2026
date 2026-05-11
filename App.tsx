@@ -75,8 +75,9 @@ const HomePage = () => (
 );
 
 const ProjectsPage = () => {
-  const currentProjects = PROJECTS.filter(p => p.status === 'CURRENT');
-  const endedProjects = PROJECTS.filter(p => p.status === 'PAST');
+  // We use ProjectStatus.CURRENT instead of 'CURRENT'
+  const currentProjects = PROJECTS.filter(p => p.status === ProjectStatus.CURRENT);
+  const endedProjects = PROJECTS.filter(p => p.status === ProjectStatus.PAST);
 
   return (
     <Section id="projects" title="PROJECTS">
