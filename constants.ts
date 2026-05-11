@@ -194,7 +194,7 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINECRAFT
   },
   {
-    name: "CrimsonChainsSMP",
+    name: "AspireSMP",
     role: "Developer",
     description: "Custom game mechanics and server-side optimization.",
     status: ProjectStatus.PAST,
