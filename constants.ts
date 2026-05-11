@@ -156,7 +156,8 @@ export const PROJECTS: Project[] = [
     role: "Network Manager & Developer",
     description: "Managing community and server infrastructure for a gaming network.",
     status: ProjectStatus.CURRENT,
-    category: ProjectCategory.MINECRAFT
+    category: ProjectCategory.MINECRAFT,
+    logo: "/maplesmp.webp"
   },
   {
     name: "MythMC",
@@ -166,9 +167,9 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.MINECRAFT
   },
   {
-    name: "Crit PVP",
-    role: "Manager",
-    description: "Managing PvP combat mechanics and server latency.",
+    name: "Fruit SMP",
+    role: "Developer",
+    description: "Developing an EarthMC experience.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
