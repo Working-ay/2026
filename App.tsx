@@ -75,21 +75,18 @@ const HomePage = () => (
 );
 
 const ProjectsPage = () => {
-  // Logic to separate projects
-  const currentProjects = PROJECTS.filter(p => p.status === ProjectStatus.CURRENT);
-  const endedProjects = PROJECTS.filter(p => p.status === ProjectStatus.PAST);
+  const currentProjects = PROJECTS.filter(p => p.status === 'CURRENT');
+  const endedProjects = PROJECTS.filter(p => p.status === 'PAST');
 
   return (
     <Section id="projects" title="PROJECTS">
-      <div className="space-y-24 max-w-6xl mx-auto"> {/* Added max-w-6xl to allow wide stretching */}
-        
+      <div className="space-y-24">
         {/* CURRENT PROJECTS */}
         <div>
-          <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-8 border-b border-white/5 pb-4">
+          <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
             Current Engagements
           </h3>
-          {/* Changed from columns-3 to a nice, wide 2-column grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
             {currentProjects.map((project, index) => (
               <ProjectCard key={`${project.name}-${index}`} project={project} />
             ))}
@@ -99,17 +96,16 @@ const ProjectsPage = () => {
         {/* ENDED PROJECTS SECTION */}
         {endedProjects.length > 0 && (
           <div>
-            <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-8 border-b border-white/5 pb-4">
+            <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
               Completed / Past Projects
             </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
               {endedProjects.map((project, index) => (
                 <ProjectCard key={`${project.name}-${index}`} project={project} />
               ))}
             </div>
           </div>
         )}
-        
       </div>
     </Section>
   );

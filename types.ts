@@ -19,7 +19,6 @@ export interface Project {
   status: ProjectStatus;
   category: ProjectCategory;
   link?: string;
-  logo?: string; 
 }
 
 export interface ShowcaseItem {
