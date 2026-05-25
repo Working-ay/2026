@@ -110,22 +110,22 @@ export const REVIEWS: Review[] = [
 
 export const PROJECTS: Project[] = [
   {
-    name: "DecourMC",
+    name: "MaceFun",
     role: "Developer",
     description: "Technical server development and backend infrastructure optimization.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
   {
-    name: "Minefire",
+    name: "MCCPVP",
     role: "Developer",
-    description: "Core systems development and custom feature implementation.",
+    description: "Configuration and Optimization",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
   {
     name: "Synclastics Cloud Technologies",
-    role: "Director & COO",
+    role: "System Administrator",
     description: "Leading operations and strategic direction for cloud infrastructure services.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.HOSTING
@@ -145,9 +145,9 @@ export const PROJECTS: Project[] = [
     category: ProjectCategory.DEVELOPMENT
   },
   {
-    name: "FuzzMC",
-    role: "Developer",
-    description: "A custom Minecraft lifesteal server experience with unique mechanics.",
+    name: "All Studious",
+    role: "Freelancer/Developer",
+    description: "Working with their team to fulfill various development needs for the clients.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT
   },
