@@ -163,7 +163,7 @@ export const PROJECTS: Project[] = [
     description: "Developing an EarthMC experience.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT,
-    logo: "/fruit-smp.png"
+    logo: "/fruitsmp.png"
   },
   {
     name: "ZenithSMP",
