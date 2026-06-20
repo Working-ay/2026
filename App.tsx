@@ -75,19 +75,20 @@ const HomePage = () => (
 );
 
 const ProjectsPage = () => {
-  // We use ProjectStatus.CURRENT instead of 'CURRENT'
   const currentProjects = PROJECTS.filter(p => p.status === ProjectStatus.CURRENT);
   const endedProjects = PROJECTS.filter(p => p.status === ProjectStatus.PAST);
 
   return (
     <Section id="projects" title="PROJECTS">
-      <div className="space-y-24">
+      <div className="space-y-24 max-w-4xl mx-auto"> {/* Changed max width to fit horizontal list perfectly */}
+        
         {/* CURRENT PROJECTS */}
         <div>
           <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
             Current Engagements
           </h3>
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
+          {/* Changed to flex-col gap-12 so they stack horizontally! */}
+          <div className="flex flex-col gap-14">
             {currentProjects.map((project, index) => (
               <ProjectCard key={`${project.name}-${index}`} project={project} />
             ))}
@@ -100,13 +101,14 @@ const ProjectsPage = () => {
             <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
               Completed / Past Projects
             </h3>
-            <div className="columns-1 md:columns-2 lg:columns-3 gap-16 space-y-16">
+            <div className="flex flex-col gap-14">
               {endedProjects.map((project, index) => (
                 <ProjectCard key={`${project.name}-${index}`} project={project} />
               ))}
             </div>
           </div>
         )}
+        
       </div>
     </Section>
   );

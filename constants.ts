@@ -157,6 +157,7 @@ export const PROJECTS: Project[] = [
     description: "Managing community and server infrastructure for a gaming network.",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT,
+    logo: "/maplesmp.png",
   },
   {
     name: "MythMC",

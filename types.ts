@@ -15,10 +15,14 @@ export enum ProjectCategory {
 export interface Project {
   name: string;
   role: string;
-  description?: string;
+  description: string;
   status: ProjectStatus;
   category: ProjectCategory;
-  link?: string;
+  logo?: string;      
+  date?: string;      
+  discord?: string;   
+  website?: string;   
+  ip?: string;        
 }
 
 export interface ShowcaseItem {
