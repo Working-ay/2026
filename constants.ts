@@ -114,42 +114,32 @@ export const PROJECTS: Project[] = [
     role: "Developer",
     description: "Technical server development and backend infrastructure optimization.",
     status: ProjectStatus.CURRENT,
-    category: ProjectCategory.MINECRAFT
+    category: ProjectCategory.MINECRAFT,
+    logo: "/macefun.png"
   },
   {
-    name: "MCCPVP",
+    name: "Lucnoxity Tierlist",
     role: "Developer",
     description: "Configuration and Optimization",
     status: ProjectStatus.CURRENT,
-    category: ProjectCategory.MINECRAFT
+    category: ProjectCategory.MINECRAFT,
+    logo: "/lux.png"
   },
   {
-    name: "Synclastics Cloud Technologies",
+    name: "Synclastics",
     role: "System Administrator",
     description: "Leading operations and strategic direction for cloud infrastructure services.",
     status: ProjectStatus.CURRENT,
-    category: ProjectCategory.HOSTING
-  },
-  {
-    name: "MJF",
-    role: "Manager",
-    description: "Managing MJF community and overseeing server infrastructure.",
-    status: ProjectStatus.CURRENT,
-    category: ProjectCategory.HOSTING
+    category: ProjectCategory.HOSTING,
+    logo: "/synclastics.png"
   },
   {
     name: "Boiga's Lounge",
-    role: "Youtube Manager",
+    role: "Developer/Manager",
     description: "Helping in managing events and media content.",
     status: ProjectStatus.CURRENT,
-    category: ProjectCategory.DEVELOPMENT
-  },
-  {
-    name: "All Studious",
-    role: "Freelancer/Developer",
-    description: "Working with their team to fulfill various development needs for the clients.",
-    status: ProjectStatus.CURRENT,
-    category: ProjectCategory.MINECRAFT
+    category: ProjectCategory.DEVELOPMENT,
+    logo: "/boiga.png"
   },
   {
     name: "MapleSMP",
@@ -164,7 +154,8 @@ export const PROJECTS: Project[] = [
     role: "Developer",
     description: "Development and system configuration.",
     status: ProjectStatus.CURRENT,
-    category: ProjectCategory.MINECRAFT
+    category: ProjectCategory.MINECRAFT,
+    logo: "/myth.png"
   },
   {
     name: "Fruit SMP",
