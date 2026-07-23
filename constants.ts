@@ -382,12 +382,12 @@ export const GALLERY_IMAGES = [
   },
   {
     src: "/order.png",
-    title: "Orders GUI items",
-    description: "Redesigned the default interface with custom color themes, formatted text lore, and updated item icons."
+    title: "Orders Configuration",
+    description: "Enhanced the existing order menu with cohesive aesthetic styling."
   },
   {
     src: "/orders.png",
-    title: "Orders Configuration",
-    description: "Enhanced the existing order menu with cohesive aesthetic styling."
+    title: "Orders GUI items",
+    description: "Redesigned the default interface with custom color themes, formatted text lore, and updated item icons."
   }
 ];
