@@ -261,8 +261,7 @@ export const TERMS_OF_SERVICE: TOSCategory[] = [
   {
     title: "3. Payment Policy",
     points: [
-      { label: "The Deposit", text: "A 70% upfront deposit is required for all projects. Work will not begin until the deposit is cleared." },
-      { label: "Final Payment", text: "The remaining 30% must be paid upon project completion but before the final source code or files are delivered." },
+      { label: "The Deposit", text: "A 100% upfront deposit is required for all projects. Work will not begin until the deposit is cleared." },
       { label: "Methods", text: "Payments are accepted via Payment Request (Credit/Debit) or Crypto. The Client is responsible for any transaction fees." }
     ]
   },
@@ -277,8 +276,8 @@ export const TERMS_OF_SERVICE: TOSCategory[] = [
   {
     title: "5. Refunds & Cancellations",
     points: [
-      { label: "No-Refund Policy", text: "Once work has started, the 70% deposit is non-refundable." },
-      { label: "Cancellation by Client", text: "If you cancel before 70% of the deadline: I keep the deposit. If you cancel after 70% of the deadline: You are liable for 75% of the total project cost to cover the time invested." },
+      { label: "No-Refund Policy", text: "Once work has started, the 100% deposit is non-refundable." },
+      { label: "Cancellation by Client", text: "If you cancel before 100% of the deadline: I keep the deposit. If you cancel after 100% of the deadline: You are liable for 100% of the total project cost to cover the time invested." },
       { label: "Cancellation by Developer", text: "If I am unable to complete the project due to personal reasons or technical failure, a 100% refund will be issued to the Client." }
     ]
   },
@@ -319,3 +318,21 @@ export const PRIVACY_POLICY: TOSCategory[] = [
 ];
 
 export const TOS_RESERVATION_CLAUSE = "NOTICE: If any TOS or Privacy broken by client, I reserve full right to cancel the commissions and future projects.";
+
+export const GALLERY_IMAGES = [
+  {
+    src: "/maplesmp.png", // Just drop your images in the 'public' folder and put the name here
+    title: "Custom Menu GUI",
+    description: "Designed a customized layout and lore design for shop menus."
+  },
+  {
+    src: "/synclastics.png", 
+    title: "Server Configuration",
+    description: "Backend optimization and custom plugin configuration."
+  },
+  {
+    src: "/lux.png",
+    title: "Minetrack Setup",
+    description: "Server network tracking and analytics dashboard."
+  }
+];

@@ -13,9 +13,10 @@ import {
   SHOWCASE_ITEMS, 
   TERMS_OF_SERVICE, 
   PRIVACY_POLICY, 
-  TOS_RESERVATION_CLAUSE 
+  TOS_RESERVATION_CLAUSE,
+  GALLERY_IMAGES // <--- Added the new gallery import here
 } from './constants';
-import { ProjectStatus } from './types'; // <--- THIS IS THE FIX! Imported from types instead of constants.
+import { ProjectStatus } from './types';
 import { Github, Mail, Disc, ExternalLink } from 'lucide-react';
 
 // Layout component to wrap all pages
@@ -80,14 +81,13 @@ const ProjectsPage = () => {
 
   return (
     <Section id="projects" title="PROJECTS">
-      <div className="space-y-24 max-w-4xl mx-auto"> {/* Changed max width to fit horizontal list perfectly */}
+      <div className="space-y-24 max-w-4xl mx-auto">
         
         {/* CURRENT PROJECTS */}
         <div>
           <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
             Current Engagements
           </h3>
-          {/* Changed to flex-col gap-12 so they stack horizontally! */}
           <div className="flex flex-col gap-14">
             {currentProjects.map((project, index) => (
               <ProjectCard key={`${project.name}-${index}`} project={project} />
@@ -115,7 +115,7 @@ const ProjectsPage = () => {
 };
 
 const ShowcasePage = () => (
-  <Section id="showcase" title="SHOWCASE">
+  <Section id="showcase" title="PRODUCTS">
     <div className="max-w-2xl mx-auto divide-y divide-white/5">
       {SHOWCASE_ITEMS.map((item, index) => (
         <div key={`${item.title}-${index}`} className="py-10 first:pt-0 last:pb-0">
@@ -157,36 +157,35 @@ const SkillsPage = () => (
   </Section>
 );
 
+// REPLACED THE OLD EXPERIENCE PAGE WITH THE NEW GALLERY
 const ExperiencePage = () => (
-  <Section id="experience" title="EXPERIENCE">
-    <div className="max-w-2xl mx-auto space-y-20 text-center md:text-left">
-      <div className="">
-        <div className="flex flex-col items-center md:items-start gap-1 mb-3">
-          <h3 className="text-xl font-bold text-white">Director & COO</h3>
-          <span className="font-mono text-xs text-gray-600">@ Synclastics Cloud Technologies</span>
+  <Section id="experience" title="GALLERY">
+    <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto">
+      {GALLERY_IMAGES.map((img, index) => (
+        <div 
+          key={index} 
+          className="break-inside-avoid group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl cursor-pointer"
+        >
+          {/* The Image */}
+          <img 
+            src={img.src} 
+            alt={img.title} 
+            className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
+          />
+          
+          {/* Hover Overlay with text */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+            <h3 className="text-white font-bold text-lg md:text-xl tracking-tight drop-shadow-md">
+              {img.title}
+            </h3>
+            {img.description && (
+              <p className="text-gray-300 text-xs md:text-sm mt-2 font-mono leading-relaxed drop-shadow-md">
+                {img.description}
+              </p>
+            )}
+          </div>
         </div>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-lg mx-auto md:mx-0">
-          Leading operations and strategic infrastructure planning. Managing cloud resources and client deployment strategies.
-        </p>
-      </div>
-       <div className="">
-        <div className="flex flex-col items-center md:items-start gap-1 mb-3">
-          <h3 className="text-xl font-bold text-gray-300">Developer</h3>
-          <span className="font-mono text-xs text-gray-600">@ Sterro Cloud Hosting</span>
-        </div>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-lg mx-auto md:mx-0">
-          Backend development for hosting panels and node management optimization.
-        </p>
-      </div>
-      <div className="">
-        <div className="flex flex-col items-center md:items-start gap-1 mb-3">
-          <h3 className="text-xl font-bold text-gray-300">Founder</h3>
-          <span className="font-mono text-xs text-gray-600">@ JollySMP & CleaveSMP</span>
-        </div>
-        <p className="text-gray-500 text-sm leading-relaxed max-w-lg mx-auto md:mx-0">
-          Established and scaled multiple Minecraft communities. Managed dedicated hardware and custom plugin development.
-        </p>
-      </div>
+      ))}
     </div>
   </Section>
 );
