@@ -321,34 +321,43 @@ export const TOS_RESERVATION_CLAUSE = "NOTICE: If any TOS or Privacy broken by c
 
 export const GALLERY_IMAGES = [
   {
-    src: "/guide.png", // Just drop your images in the 'public' folder and put the name here
-    title: "Custom Guide/Tutorial Menu",
-    description: "Designed a customized layout and lore design for Guide Menu."
+    src: "/guide.png",
+    title: "Guide & Tutorial Menu",
+    description: "Designed a custom interface layout with tailored item lore for server tutorials."
   },
   {
-    src: "/pw.png", 
-    title: "Server Configuration",
-    description: "Configured an aesthetic Player Warp GUI."
+    src: "/pw.png",
+    title: "Player Warp GUI",
+    description: "Configured an aesthetic and intuitive menu for player warp navigation."
   },
   {
     src: "/music.png",
-    title: "Custom Music GUI",
-    description: "Configured an Music gui based on owners theme."
+    title: "Custom Music Interface",
+    description: "Created a music menu styled around the server owner's theme."
   },
   {
     src: "/ah.png",
-    title: "Auction House GUI",
-    description: "Configured a custom Auction House GUI for the server."
+    title: "Auction House Interface",
+    description: "Built a clean, streamlined Auction House GUI for player trading."
   },
   {
     src: "/ah2.png",
-    title: "Auction House GUI",
-    description: "Configured a custom Auction House GUI for the server."
-
+    title: "Auction House Detail View",
+    description: "Designed an extended Auction House view for item listings and transactions."
   },
   {
     src: "/patronholo.png",
-    title: "Patron Hologram",
-    description: "Configured a custom Patron Hologram for the server."
+    title: "Patron Display Hologram",
+    description: "Configured a visually striking hologram layout to showcase server patrons."
   },
+  {
+    src: "/tab.png",
+    title: "Custom Tab List",
+    description: "Formatted a clean, informative player list with real-time server stats."
+  },
+  {
+    src: "/levels.png",
+    title: "Levels & Progression GUI",
+    description: "Built a level tracking menu featuring custom lore and reward displays."
+  }
 ];
