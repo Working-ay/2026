@@ -379,5 +379,15 @@ export const GALLERY_IMAGES = [
     src: "/server.png",
     title: "Hologram & NPC Designs",
     description: "Designed immersive NPC layouts and holograms to enhance server navigation and branding."
+  },
+  {
+    src: "/order.png",
+    title: "Orders GUI items",
+    description: "Redesigned the default interface with custom color themes, formatted text lore, and updated item icons."
+  },
+  {
+    src: "/orders.png",
+    title: "Orders Configuration",
+    description: "Enhanced the existing order menu with cohesive aesthetic styling."
   }
 ];
