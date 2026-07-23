@@ -158,10 +158,12 @@ const SkillsPage = () => (
 );
 
 // REPLACED THE OLD EXPERIENCE PAGE WITH THE NEW GALLERY
-const ExperiencePage = () => (
-  <Section id="experience" title="GALLERY">
+// Change it to look exactly like this:
+const GalleryPage = () => (
+  <Section id="gallery" title="GALLERY">
     <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto">
       {GALLERY_IMAGES.map((img, index) => (
+// ... rest of the code stays the same
         <div 
           key={index} 
           className="break-inside-avoid group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl cursor-pointer"
@@ -209,7 +211,7 @@ const App: React.FC = () => {
           <Route path="/projects" element={<ProjectsPage />} />
           <Route path="/showcase" element={<ShowcasePage />} />
           <Route path="/skills" element={<SkillsPage />} />
-          <Route path="/experience" element={<ExperiencePage />} />
+          <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           
           <Route path="/tos" element={
