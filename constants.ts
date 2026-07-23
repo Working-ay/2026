@@ -321,18 +321,34 @@ export const TOS_RESERVATION_CLAUSE = "NOTICE: If any TOS or Privacy broken by c
 
 export const GALLERY_IMAGES = [
   {
-    src: "/maplesmp.png", // Just drop your images in the 'public' folder and put the name here
-    title: "Custom Menu GUI",
-    description: "Designed a customized layout and lore design for shop menus."
+    src: "/guide.png", // Just drop your images in the 'public' folder and put the name here
+    title: "Custom Guide/Tutorial Menu",
+    description: "Designed a customized layout and lore design for Guide Menu."
   },
   {
-    src: "/synclastics.png", 
+    src: "/pw.png", 
     title: "Server Configuration",
-    description: "Backend optimization and custom plugin configuration."
+    description: "Configured an aesthetic Player Warp GUI."
   },
   {
-    src: "/lux.png",
-    title: "Minetrack Setup",
-    description: "Server network tracking and analytics dashboard."
-  }
+    src: "/music.png",
+    title: "Custom Music GUI",
+    description: "Configured an Music gui based on owners theme."
+  },
+  {
+    src: "/ah.png",
+    title: "Auction House GUI",
+    description: "Configured a custom Auction House GUI for the server."
+  },
+  {
+    src: "/ah2.png",
+    title: "Auction House GUI",
+    description: "Configured a custom Auction House GUI for the server."
+
+  },
+  {
+    src: "/patronholo.png",
+    title: "Patron Hologram",
+    description: "Configured a custom Patron Hologram for the server."
+  },
 ];
