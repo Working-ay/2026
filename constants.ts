@@ -359,5 +359,25 @@ export const GALLERY_IMAGES = [
     src: "/levels.png",
     title: "Levels & Progression GUI",
     description: "Built a level tracking menu featuring custom lore and reward displays."
+  },
+  {
+    src: "/news.png",
+    title: "News & Announcements",
+    description: "Created a custom news feed interface for server updates and announcements."
+  },
+  {
+    src: "/shardshop.png",
+    title: "Shard Shop",
+    description: "Designed a custom shard shop menu for player purchases."
+  },
+  {
+    src: "/vote.png",
+    title: "Voting Rewards Menu",
+    description: "Built a custom voting rewards interface for player engagement."
+  },
+  {
+    src: "/server.png",
+    title: "Hologram & NPC Designs",
+    description: "Designed immersive NPC layouts and holograms to enhance server navigation and branding."
   }
 ];
