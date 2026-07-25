@@ -121,7 +121,7 @@ export const PROJECTS: Project[] = [
     name: "Lucnoxity Tierlist",
     role: "Developer",
     description: "Configuration and Optimization",
-    status: ProjectStatus.CURRENT,
+    status: ProjectStatus.PAST,
     category: ProjectCategory.MINECRAFT,
     logo: "/lux.png"
   },

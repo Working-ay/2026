@@ -60,15 +60,15 @@ const HomePage = () => (
         AYRIX<span className="text-gray-800">MC</span>
       </h1>
       <div className="flex flex-col items-center gap-6 font-mono text-xs md:text-sm text-gray-500">
-         <div className="flex gap-4 uppercase tracking-widest">
+         <div className="flex flex-wrap justify-center gap-3 md:gap-4 uppercase tracking-widest">
+            <span>Configurator</span>
+            <span className="hidden sm:inline text-gray-700">•</span>
+            <span>Optimiser</span>
+            <span className="hidden sm:inline text-gray-700">•</span>
             <span>SysAdmin</span>
-            <span>•</span>
-            <span>Developer</span>
-            <span>•</span>
-            <span>Hosting</span>
          </div>
-        <p className="max-w-md leading-relaxed text-gray-600">
-          Architecting high-performance infrastructure and automated backend systems for gaming networks.
+        <p className="max-w-lg leading-relaxed text-gray-400 text-sm md:text-base">
+          Specializing in full server setups, advanced plugin configuration, comprehensive bug fixing, and performance optimization for Minecraft networks.
         </p>
       </div>
     </div>
