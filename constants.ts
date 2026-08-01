@@ -59,10 +59,28 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
 
 export const REVIEWS: Review[] = [
   {
-    username: "azureknightfr",
+    username: "nullseeker",
     rating: 5,
-    content: "One of the best Configuration Services provided by AyrixMC for my server. Really Appreciated his work and I'll always suggest hiring him as a Developer for your Minecraft Server.",
-    date: "1/27/2026"
+    content: "AyrixMC was extremely helpful and responsive when i hired him as network manager and developer on my server. highly recommend totally worth it!",
+    date: "7/31/2026"
+  },
+  {
+    username: "justboiga",
+    rating: 5,
+    content: "I have known AyrixMC for over 1 year now, he is basically my right hand man when it comes to creating projects or helping me with development and management sided things. He is a great developer and if you need someone i would 100% recommend him, he takes his job seriously and works hard and he is also a great friend who likes to help and suggest ideas and a good person to talk to and chill with.",
+    date: "7/26/2026"
+  },
+  {
+    username: "idkkiscool",
+    rating: 5,
+    content: "Ayrix's a great guy, one of the best developers I've ever worked with he's always there to help. Goes above and beyond expectations.",
+    date: "7/15/2026"
+  },
+  {
+    username: "stonerzfps",
+    rating: 5,
+    content: "The development provided by Ayrix to MaceFun was good because everything was completed effectively and within the budget. The systems are structured well and are very stable, and are ready for use on servers without any excess complications. There is good balance between performance and functionality, which means proper planning and implementation.",
+    date: "6/28/2026"
   },
   {
     username: "bmoneyboy",
