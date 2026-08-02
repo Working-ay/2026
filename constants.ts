@@ -77,6 +77,12 @@ export const REVIEWS: Review[] = [
     date: "7/15/2026"
   },
   {
+    username: "tjosx",
+    rating: 5,
+    content: "AyrixMC is a very good guy and helped me when my server got nuked even if it wasn't his job he still helped me fix everything and secure my server I would give him more stars if it was possible",
+    date: "7/15/2026"
+  },
+  {
     username: "stonerzfps",
     rating: 5,
     content: "The development provided by Ayrix to MaceFun was good because everything was completed effectively and within the budget. The systems are structured well and are very stable, and are ready for use on servers without any excess complications. There is good balance between performance and functionality, which means proper planning and implementation.",
