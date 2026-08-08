@@ -65,6 +65,12 @@ export const REVIEWS: Review[] = [
     date: "7/31/2026"
   },
   {
+    username: "dxnnv",
+    rating: 5,
+    content: "I’ve worked alongside Ayrix on a few different servers and projects, and he has always been capable in his roles handling core work to the servers' foundations. His experience proves valuable to each network, across a broad range of areas including plugin development, network configuration, system administration, general management, and leading overall development. From my experience working with him, he’s knowledgeable, easy to work with, and willing to help out when needed.",
+    date: "8/8/2026"
+  },
+  {
     username: "justboiga",
     rating: 5,
     content: "I have known AyrixMC for over 1 year now, he is basically my right hand man when it comes to creating projects or helping me with development and management sided things. He is a great developer and if you need someone i would 100% recommend him, he takes his job seriously and works hard and he is also a great friend who likes to help and suggest ideas and a good person to talk to and chill with.",
