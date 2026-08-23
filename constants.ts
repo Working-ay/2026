@@ -20,21 +20,9 @@ export const SOCIAL_LINKS = {
 
 export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
-    title: "ArchitectShop",
-    type: "Plugin",
-    description: "A premium Minecraft shop plugin designed for scalability and performance, featuring advanced UI/UX and dynamic economies. [COMING SOON]",
-    link: "#"
-  },
-  {
-    title: "AdminLogger",
-    type: "Plugin",
-    description: "Advanced administrative logging and anti-cheat monitoring system designed for high-security Minecraft server environments. [COMING SOON]",
-    link: "#"
-  },
-  {
     title: "GenericTags",
     type: "Plugin",
-    description: "High-performance chat and nameplate tag management system for large-scale Minecraft networks.",
+    description: "High-performance chat and nameplate tag management system for large-scale Minecraft networks. [Closed]",
     link: "https://builtbybit.com/resources/generictags.93547/"
   },
   {
@@ -46,13 +34,13 @@ export const SHOWCASE_ITEMS: ShowcaseItem[] = [
   {
     title: "Infonix.studio",
     type: "Website",
-    description: "Creative agency landing page built with modern web technologies and a focus on visual impact.",
+    description: "Creative agency landing page built with modern web technologies and a focus on visual impact. [Closed]",
     link: "https://infonix.studio"
   },
   {
     title: "JollyMC Portal",
     type: "Application",
-    description: "Custom-built application portal for staff and player management for the JollyMC Network.",
+    description: "Custom-built application portal for staff and player management for the JollyMC Network. [Closed]",
     link: "https://apps.ayrixmc.fun"
   }
 ];
@@ -154,6 +142,14 @@ export const PROJECTS: Project[] = [
     status: ProjectStatus.PAST,
     category: ProjectCategory.MINECRAFT,
     logo: "/lux.png"
+  },
+  {
+    name: "Unstable Network",
+    role: "Developer",
+    description: "Configuration and Optimization",
+    status: ProjectStatus.CURRENT,
+    category: ProjectCategory.MINECRAFT,
+    logo: "/unstable.png"
   },
   {
     name: "Synclastics",
