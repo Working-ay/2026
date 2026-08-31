@@ -152,6 +152,13 @@ export const PROJECTS: Project[] = [
     logo: "/unstable.png"
   },
   {
+    name: "Makera",
+    role: "Developer",
+    description: "Configuration & Server Setup",
+    status: ProjectStatus.CURRENT,
+    category: ProjectCategory.MINECRAFT,
+  },
+  {
     name: "Synclastics",
     role: "System Administrator",
     description: "Leading operations and strategic direction for cloud infrastructure services.",
