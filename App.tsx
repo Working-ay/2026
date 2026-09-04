@@ -14,7 +14,7 @@ import {
   TERMS_OF_SERVICE, 
   PRIVACY_POLICY, 
   TOS_RESERVATION_CLAUSE,
-  GALLERY_IMAGES // <--- Added the new gallery import here
+  GALLERY_IMAGES
 } from './constants';
 import { ProjectStatus } from './types';
 import { Github, Mail, Disc, ExternalLink } from 'lucide-react';
@@ -81,14 +81,14 @@ const ProjectsPage = () => {
 
   return (
     <Section id="projects" title="PROJECTS">
-      <div className="space-y-24 max-w-4xl mx-auto">
+      <div className="space-y-24 max-w-6xl mx-auto">
         
         {/* CURRENT PROJECTS */}
         <div>
-          <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
+          <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-8 border-b border-white/5 pb-4">
             Current Engagements
           </h3>
-          <div className="flex flex-col gap-14">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {currentProjects.map((project, index) => (
               <ProjectCard key={`${project.name}-${index}`} project={project} />
             ))}
@@ -98,10 +98,10 @@ const ProjectsPage = () => {
         {/* ENDED PROJECTS SECTION */}
         {endedProjects.length > 0 && (
           <div>
-            <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-12 border-b border-white/5 pb-4">
+            <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-8 border-b border-white/5 pb-4">
               Completed / Past Projects
             </h3>
-            <div className="flex flex-col gap-14">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               {endedProjects.map((project, index) => (
                 <ProjectCard key={`${project.name}-${index}`} project={project} />
               ))}
@@ -157,16 +157,16 @@ const SkillsPage = () => (
   </Section>
 );
 
-// REPLACED THE OLD EXPERIENCE PAGE WITH THE NEW GALLERY
-// Change it to look exactly like this:
 const GalleryPage = () => (
   <Section id="gallery" title="GALLERY">
     <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto">
       {GALLERY_IMAGES.map((img, index) => (
-// ... rest of the code stays the same
-        <div 
+        <a 
           key={index} 
-          className="break-inside-avoid group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl cursor-pointer"
+          href={img.src} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className="block break-inside-avoid group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl cursor-pointer"
         >
           {/* The Image */}
           <img 
@@ -186,7 +186,7 @@ const GalleryPage = () => (
               </p>
             )}
           </div>
-        </div>
+        </a>
       ))}
     </div>
   </Section>
@@ -202,6 +202,25 @@ const ReviewsPage = () => (
   </Section>
 );
 
+// NEW: IMPORTANT NOTICE PAGE
+const ImpPage = () => (
+  <Section id="imp" title="IMPORTANT NOTICE">
+    <div className="max-w-3xl mx-auto mt-8">
+      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
+        {/* Subtle top red glow */}
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
+        
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
+          I build setups based on what the owner asks for. I provide recommendations, but the final output is always their choice.
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
+          If you dislike a setup, don't judge my abilities for delivering what was requested. I'm not arguing about this or discussing it further.
+        </p>
+      </div>
+    </div>
+  </Section>
+);
+
 const App: React.FC = () => {
   return (
     <Router>
@@ -213,6 +232,7 @@ const App: React.FC = () => {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
+          <Route path="/imp" element={<ImpPage />} /> {/* NEW ROUTE ADDED HERE */}
           
           <Route path="/tos" element={
             <LegalPage 
