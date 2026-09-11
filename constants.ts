@@ -144,12 +144,28 @@ export const PROJECTS: Project[] = [
     logo: "/lux.png"
   },
   {
+    name: "ZetrexMC",
+    role: "Developer",
+    description: "Server Setups or Configurations",
+    status: ProjectStatus.CURRENT,
+    category: ProjectCategory.MINECRAFT,
+    logo: "/zetrex.png"
+  },
+  {
     name: "Unstable Network",
     role: "Developer",
     description: "Configuration and Optimization",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT,
     logo: "/unstable.png"
+  },
+  {
+    name: "Mineflame",
+    role: "Developer",
+    description: "Configuration and Optimization",
+    status: ProjectStatus.CURRENT,
+    category: ProjectCategory.MINECRAFT,
+    logo: "/mineflame.png"
   },
   {
     name: "Makera",
@@ -176,9 +192,9 @@ export const PROJECTS: Project[] = [
   },
   {
     name: "MapleSMP",
-    role: "Network Manager & Developer",
+    role: "Network Manager",
     description: "Managing community and server infrastructure for a gaming network.",
-    status: ProjectStatus.CURRENT,
+    status: ProjectStatus.PAST,
     category: ProjectCategory.MINECRAFT,
     logo: "/maplesmp.png",
   },
@@ -191,10 +207,10 @@ export const PROJECTS: Project[] = [
     logo: "/myth.png"
   },
   {
-    name: "Fruit SMP",
+    name: "MineMania",
     role: "Developer",
     description: "Developing an EarthMC experience.",
-    status: ProjectStatus.CURRENT,
+    status: ProjectStatus.PAST,
     category: ProjectCategory.MINECRAFT,
     logo: "/fruitsmp.png"
   },
