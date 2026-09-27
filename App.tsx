@@ -217,7 +217,7 @@ const ImpPage = () => (
         </p>
       </div>
 
-      {/* Notice 2 - new */}
+      {/* Notice 2 - existing */}
       <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
         <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
@@ -228,6 +228,20 @@ const ImpPage = () => (
         </p>
         <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
           Pressuring or threatening me to write plugins will not be tolerated. Any threats made will be formally reported. This is non-negotiable.
+        </p>
+      </div>
+
+      {/* Notice 3 - new */}
+      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
+        <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
+          Scope of Work
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
+          Hiring me as a developer does <span className="text-white font-semibold">not</span> give you the right to demand I learn skills outside my expertise. I will not be forced to acquire knowledge beyond what I already offer, unless it is something reasonably straightforward.
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
+          Any attempt to pressure me beyond this boundary falls under my <span className="text-white font-semibold">Terms of Service</span> and will be handled accordingly.
         </p>
       </div>
 
