@@ -202,14 +202,13 @@ const ReviewsPage = () => (
   </Section>
 );
 
-// NEW: IMPORTANT NOTICE PAGE
 const ImpPage = () => (
   <Section id="imp" title="IMPORTANT NOTICE">
-    <div className="max-w-3xl mx-auto mt-8">
+    <div className="max-w-3xl mx-auto mt-8 space-y-6">
+      
+      {/* Notice 1 - existing */}
       <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
-        {/* Subtle top red glow */}
         <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        
         <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
           I build setups based on what the owner asks for. I provide recommendations, but the final output is always their choice.
         </p>
@@ -217,6 +216,21 @@ const ImpPage = () => (
           If you dislike a setup, don't judge my abilities for delivering what was requested. I'm not arguing about this or discussing it further.
         </p>
       </div>
+
+      {/* Notice 2 - new */}
+      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
+        <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
+          Service Boundary
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
+          I am exclusively a <span className="text-white font-semibold">Configurator</span> and <span className="text-white font-semibold">Optimiser</span>. While Java Plugin Development is listed as a skill, it is <span className="text-white font-semibold">not a service I offer</span> to any server under any circumstances.
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
+          Pressuring or threatening me to write plugins will not be tolerated. Any threats made will be formally reported. This is non-negotiable.
+        </p>
+      </div>
+
     </div>
   </Section>
 );
