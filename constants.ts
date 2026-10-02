@@ -173,6 +173,7 @@ export const PROJECTS: Project[] = [
     description: "Configuration & Server Setup",
     status: ProjectStatus.CURRENT,
     category: ProjectCategory.MINECRAFT,
+    logo: "/makera.png"
   },
   {
     name: "Synclastics",
