@@ -245,6 +245,19 @@ const ImpPage = () => (
         </p>
       </div>
 
+      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
+        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
+        <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
+          Similar Setups
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
+          If I am working on your server and another server at the same time, some configs or styles may look the <span className="text-white font-semibold">same</span>. This is because the owner gave me an example to follow, <span className="text-white font-semibold">not</span> because I copied anyone's work.
+        </p>
+        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
+          Accusing me of copying, warning me, or telling me not to copy over this will <span className="text-white font-semibold">not be accepted or tolerated</span>. Please use common sense before raising it.
+        </p>
+      </div>
+
     </div>
   </Section>
 );
