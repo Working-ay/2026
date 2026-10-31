@@ -65,7 +65,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             )}
             {project.ip && (
               <button onClick={() => handleCopy(project.ip!)} className={`${btn} font-mono cursor-pointer`}>
-                {copied ? <Check size={12} className="text-green-400" /> : <Copy size={12} />}
+                {copied ? <Check size={12} className="text-ink" /> : <Copy size={12} />}
                 {copied ? 'Copied' : project.ip}
               </button>
             )}
