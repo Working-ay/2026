@@ -4,40 +4,52 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AyrixMC | Portfolio</title>
-    <!-- Using Tailwind Play CDN for easy setup -->
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,500;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <script>
       tailwind.config = {
         theme: {
           extend: {
             fontFamily: {
-              sans: ['Inter', 'sans-serif'],
-              mono: ['JetBrains Mono', 'monospace'],
+              sans: ['Inter', 'system-ui', 'sans-serif'],
+              serif: ['"Source Serif 4"', 'Georgia', 'serif'],
+              mono: ['"JetBrains Mono"', 'monospace'],
             },
             colors: {
-              background: '#000000',
-              surface: '#000000',
-              border: '#333333',
+              bg: '#1f1e1c',
+              surface: '#262523',
+              raised: '#2e2d2a',
+              line: 'rgba(255,255,255,0.08)',
+              ink: '#ecebe6',
+              muted: '#a3a199',
+              dim: '#6e6c66',
+              accent: '#d97757',
             }
           }
         }
       }
     </script>
     <style>
-      body {
-        background-color: #000000;
-        color: #ffffff;
+      html, body {
+        background-color: #1f1e1c;
+        color: #ecebe6;
         margin: 0;
+        -webkit-font-smoothing: antialiased;
       }
-      ::-webkit-scrollbar { width: 6px; }
-      ::-webkit-scrollbar-track { background: #000; }
-      ::-webkit-scrollbar-thumb { background: #333; border-radius: 3px; }
+      ::selection { background: rgba(217,119,87,0.35); color: #fff; }
+      ::-webkit-scrollbar { width: 8px; }
+      ::-webkit-scrollbar-track { background: #1f1e1c; }
+      ::-webkit-scrollbar-thumb { background: #3a3936; border-radius: 8px; }
+      .no-scrollbar::-webkit-scrollbar { display: none; }
+      .no-scrollbar { scrollbar-width: none; }
+      @keyframes fadeUp { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: none; } }
+      .fade-up { animation: fadeUp .45s ease-out both; }
     </style>
   </head>
   <body>
     <div id="root"></div>
-    <!-- THIS LINE BELOW WAS MISSING - IT LOADS YOUR APP -->
     <script type="module" src="/index.tsx"></script>
   </body>
 </html>

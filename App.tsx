@@ -5,74 +5,96 @@ import { Section } from './components/Section';
 import { ProjectCard } from './components/ProjectCard';
 import { ReviewCard } from './components/ReviewCard';
 import { LegalPage } from './components/LegalPage';
-import { 
-  PROJECTS, 
-  SKILLS, 
-  REVIEWS, 
-  SOCIAL_LINKS, 
-  SHOWCASE_ITEMS, 
-  TERMS_OF_SERVICE, 
-  PRIVACY_POLICY, 
+import {
+  PROJECTS,
+  SKILLS,
+  REVIEWS,
+  SOCIAL_LINKS,
+  SHOWCASE_ITEMS,
+  TERMS_OF_SERVICE,
+  PRIVACY_POLICY,
   TOS_RESERVATION_CLAUSE,
   GALLERY_IMAGES
 } from './constants';
 import { ProjectStatus } from './types';
-import { Github, Mail, Disc, ExternalLink } from 'lucide-react';
+import { Github, Mail, MessageCircle, ArrowRight, ArrowUpRight } from 'lucide-react';
 
-// Layout component to wrap all pages
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
-    <div className="min-h-screen bg-black text-white selection:bg-white selection:text-black font-sans flex flex-col">
+    <div className="min-h-screen bg-bg text-ink font-sans flex flex-col">
       <Navbar />
-      <main className="flex-grow pt-24">
+      <main className="flex-grow pt-14">
         {children}
       </main>
-      <footer className="py-24 px-6 text-center border-t border-white/5">
-        <div className="flex justify-center gap-12 mb-8">
-          <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-white transition-colors"><Github size={20} /></a>
-          <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" className="text-gray-600 hover:text-white transition-colors"><Disc size={20} /></a>
-          <a href={SOCIAL_LINKS.email} className="text-gray-600 hover:text-white transition-colors"><Mail size={20} /></a>
+      <footer className="border-t border-line">
+        <div className="max-w-3xl mx-auto px-5 py-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-sm text-dim">
+          <p>© {new Date().getFullYear()} AyrixMC</p>
+          <div className="flex items-center gap-5">
+            <Link to="/tos" className="hover:text-ink transition-colors">Terms</Link>
+            <Link to="/privacy" className="hover:text-ink transition-colors">Privacy</Link>
+            <span className="w-px h-4 bg-line" />
+            <a href={SOCIAL_LINKS.github} target="_blank" rel="noopener noreferrer" aria-label="GitHub" className="hover:text-ink transition-colors"><Github size={16} /></a>
+            <a href={SOCIAL_LINKS.discord} target="_blank" rel="noopener noreferrer" aria-label="Discord" className="hover:text-ink transition-colors"><MessageCircle size={16} /></a>
+            <a href={SOCIAL_LINKS.email} aria-label="Email" className="hover:text-ink transition-colors"><Mail size={16} /></a>
+          </div>
         </div>
-        
-        <div className="flex justify-center gap-6 mb-8 font-mono text-[9px] uppercase tracking-widest text-gray-600">
-          <Link to="/tos" className="hover:text-white transition-colors">Terms of Service</Link>
-          <span>/</span>
-          <Link to="/privacy" className="hover:text-white transition-colors">Privacy Policy</Link>
-        </div>
-
-        <p className="text-gray-800 font-mono text-[10px] uppercase tracking-widest">
-          AyrixMC System • {new Date().getFullYear()}
-        </p>
       </footer>
     </div>
   );
 };
 
-// Page Components
 const HomePage = () => (
-  <section className="min-h-[80vh] flex items-center justify-center px-6 relative overflow-hidden">
-    <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-white/[0.02] rounded-full blur-3xl pointer-events-none"></div>
-    <div className="max-w-4xl w-full text-center relative z-10">
-      <p className="font-mono text-xs text-gray-600 mb-8 tracking-[0.3em] uppercase">
-        COMMISSIONS ARE OPEN
-      </p>
-      <h1 className="text-6xl md:text-9xl font-bold tracking-tighter mb-10 text-white">
-        AYRIX<span className="text-gray-800">MC</span>
+  <section className="min-h-[calc(100vh-8rem)] flex items-center px-5">
+    <div className="max-w-3xl w-full mx-auto fade-up">
+      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-line bg-surface text-xs text-muted mb-8">
+        <span className="relative flex w-2 h-2">
+          <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
+          <span className="relative w-2 h-2 rounded-full bg-green-400" />
+        </span>
+        Commissions are open
+      </div>
+
+      <h1 className="font-serif text-5xl md:text-6xl tracking-tight leading-[1.1] text-ink">
+        Hi, I'm <span className="text-accent">Ayrix</span>.
       </h1>
-      <div className="flex flex-col items-center gap-6 font-mono text-xs md:text-sm text-gray-500">
-         <div className="flex flex-wrap justify-center gap-3 md:gap-4 uppercase tracking-widest">
-            <span>Configurator</span>
-            <span className="hidden sm:inline text-gray-700">•</span>
-            <span>Optimiser</span>
-            <span className="hidden sm:inline text-gray-700">•</span>
-            <span>SysAdmin</span>
-         </div>
-        <p className="max-w-lg leading-relaxed text-gray-400 text-sm md:text-base">
-          Specializing in full server setups, advanced plugin configuration, comprehensive bug fixing, and performance optimization for Minecraft networks.
-        </p>
+
+      <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl">
+        I set up, configure and optimise Minecraft networks, from full server setups and advanced plugin configuration to bug fixing and performance tuning.
+      </p>
+
+      <div className="flex flex-wrap gap-2 mt-8">
+        {['Configurator', 'Optimiser', 'SysAdmin'].map((role) => (
+          <span key={role} className="px-3 py-1 rounded-lg bg-surface border border-line text-sm text-muted">
+            {role}
+          </span>
+        ))}
+      </div>
+
+      <div className="flex flex-wrap gap-3 mt-10">
+        <Link
+          to="/projects"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ink text-bg text-sm font-medium hover:bg-white transition-colors"
+        >
+          View projects <ArrowRight size={16} />
+        </Link>
+        <a
+          href={SOCIAL_LINKS.discord}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-line text-sm text-ink hover:bg-white/5 transition-colors"
+        >
+          Contact on Discord
+        </a>
       </div>
     </div>
   </section>
+);
+
+const GroupLabel: React.FC<{ children: React.ReactNode; count?: number }> = ({ children, count }) => (
+  <div className="flex items-center gap-2 mb-4 text-sm text-dim">
+    <span>{children}</span>
+    {count !== undefined && <span className="px-1.5 rounded-md bg-surface text-xs">{count}</span>}
+  </div>
 );
 
 const ProjectsPage = () => {
@@ -80,110 +102,99 @@ const ProjectsPage = () => {
   const endedProjects = PROJECTS.filter(p => p.status === ProjectStatus.PAST);
 
   return (
-    <Section id="projects" title="PROJECTS">
-      <div className="space-y-24 max-w-6xl mx-auto">
-        
-        {/* CURRENT PROJECTS */}
+    <Section id="projects" title="Projects" subtitle="Servers and networks I'm working with, and ones I've worked with before.">
+      <div className="space-y-12">
         <div>
-          <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-8 border-b border-white/5 pb-4">
-            Current Engagements
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <GroupLabel count={currentProjects.length}>Current</GroupLabel>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {currentProjects.map((project, index) => (
               <ProjectCard key={`${project.name}-${index}`} project={project} />
             ))}
           </div>
         </div>
 
-        {/* ENDED PROJECTS SECTION */}
         {endedProjects.length > 0 && (
           <div>
-            <h3 className="font-mono text-[10px] text-gray-600 uppercase tracking-[0.3em] mb-8 border-b border-white/5 pb-4">
-              Completed / Past Projects
-            </h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            <GroupLabel count={endedProjects.length}>Past</GroupLabel>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
               {endedProjects.map((project, index) => (
                 <ProjectCard key={`${project.name}-${index}`} project={project} />
               ))}
             </div>
           </div>
         )}
-        
       </div>
     </Section>
   );
 };
 
 const ShowcasePage = () => (
-  <Section id="showcase" title="PRODUCTS">
-    <div className="max-w-2xl mx-auto divide-y divide-white/5">
-      {SHOWCASE_ITEMS.map((item, index) => (
-        <div key={`${item.title}-${index}`} className="py-10 first:pt-0 last:pb-0">
-          <div className="flex justify-between items-baseline mb-2">
-            <h3 className="text-lg font-bold text-white">{item.title}</h3>
-            <span className="font-mono text-[10px] text-gray-600 uppercase tracking-widest">{item.type}</span>
-          </div>
-          <p className="text-gray-500 text-sm leading-relaxed mb-4">
-            {item.description}
-          </p>
-          {item.link !== "#" && (
-            <a 
-              href={item.link} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-[10px] font-mono text-gray-400 hover:text-white transition-colors uppercase tracking-widest"
-            >
-              Visit <ExternalLink size={10} />
-            </a>
-          )}
-        </div>
-      ))}
+  <Section id="showcase" title="Showcase" subtitle="Plugins, websites and apps I've built.">
+    <div className="rounded-2xl border border-line bg-surface divide-y divide-line overflow-hidden">
+      {SHOWCASE_ITEMS.map((item, index) => {
+        const hasLink = item.link !== "#";
+        const Wrapper: any = hasLink ? 'a' : 'div';
+        return (
+          <Wrapper
+            key={`${item.title}-${index}`}
+            {...(hasLink ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' } : {})}
+            className="group flex items-start gap-4 p-5 hover:bg-white/[0.03] transition-colors"
+          >
+            <div className="flex-1 min-w-0">
+              <div className="flex items-center gap-2 flex-wrap">
+                <h3 className="text-ink font-medium">{item.title}</h3>
+                <span className="text-[11px] text-dim border border-line px-1.5 py-px rounded-md">{item.type}</span>
+              </div>
+              <p className="text-sm text-muted leading-relaxed mt-1.5">{item.description}</p>
+            </div>
+            {hasLink && (
+              <ArrowUpRight size={18} className="text-dim group-hover:text-ink transition-colors shrink-0 mt-0.5" />
+            )}
+          </Wrapper>
+        );
+      })}
     </div>
   </Section>
 );
 
 const SkillsPage = () => (
-  <Section id="skills" title="SKILLS">
-    <div className="flex flex-wrap justify-center gap-x-10 gap-y-6 max-w-3xl mx-auto">
+  <Section id="skills" title="Skills" subtitle="Tools and technologies I work with day to day.">
+    <div className="flex flex-wrap gap-2">
       {SKILLS.map((skill) => (
-        <div key={skill.name} className="group flex items-center gap-3">
-          <span className="w-0.5 h-0.5 bg-gray-700 group-hover:bg-white transition-colors"></span>
-          <span className="font-mono text-sm text-gray-500 group-hover:text-white transition-colors cursor-default">
-            {skill.name}
-          </span>
-        </div>
+        <span
+          key={skill.name}
+          className="px-3 py-1.5 rounded-lg bg-surface border border-line text-sm text-muted hover:text-ink hover:border-white/15 transition-colors cursor-default"
+        >
+          {skill.name}
+        </span>
       ))}
     </div>
   </Section>
 );
 
 const GalleryPage = () => (
-  <Section id="gallery" title="GALLERY">
-    <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 max-w-6xl mx-auto">
+  <Section id="gallery" title="Gallery" subtitle="A few screenshots from setups I've configured.">
+    <div className="columns-1 sm:columns-2 gap-4">
       {GALLERY_IMAGES.map((img, index) => (
-        <a 
-          key={index} 
-          href={img.src} 
-          target="_blank" 
+        <a
+          key={index}
+          href={img.src}
+          target="_blank"
           rel="noopener noreferrer"
-          className="block break-inside-avoid group relative rounded-2xl overflow-hidden border border-white/10 bg-white/5 shadow-2xl cursor-pointer"
+          className="group block mb-4 break-inside-avoid rounded-2xl border border-line bg-surface overflow-hidden hover:border-white/15 transition-colors"
         >
-          {/* The Image */}
-          <img 
-            src={img.src} 
-            alt={img.title} 
-            className="w-full h-auto object-cover transform transition-transform duration-700 group-hover:scale-105"
-          />
-          
-          {/* Hover Overlay with text */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
-            <h3 className="text-white font-bold text-lg md:text-xl tracking-tight drop-shadow-md">
-              {img.title}
-            </h3>
+          <div className="overflow-hidden bg-raised">
+            <img
+              src={img.src}
+              alt={img.title}
+              loading="lazy"
+              className="w-full h-auto transition-transform duration-500 group-hover:scale-[1.03]"
+            />
+          </div>
+          <div className="p-4">
+            <h3 className="text-sm font-medium text-ink">{img.title}</h3>
             {img.description && (
-              <p className="text-gray-300 text-xs md:text-sm mt-2 font-mono leading-relaxed drop-shadow-md">
-                {img.description}
-              </p>
+              <p className="text-sm text-muted leading-relaxed mt-1">{img.description}</p>
             )}
           </div>
         </a>
@@ -193,8 +204,8 @@ const GalleryPage = () => (
 );
 
 const ReviewsPage = () => (
-  <Section id="reviews" title="REVIEWS">
-    <div className="flex flex-col max-w-4xl mx-auto">
+  <Section id="reviews" title="Reviews" subtitle={`What ${REVIEWS.length} clients and collaborators have said.`}>
+    <div className="columns-1 sm:columns-2 gap-4">
       {REVIEWS.map((review, index) => (
         <ReviewCard key={`${review.username}-${index}`} review={review} />
       ))}
@@ -202,62 +213,37 @@ const ReviewsPage = () => (
   </Section>
 );
 
+const Notice: React.FC<{ label?: string; children: React.ReactNode }> = ({ label, children }) => (
+  <div className="p-5 md:p-6 rounded-2xl bg-surface border border-line border-l-2 border-l-accent">
+    {label && <h3 className="font-serif text-lg text-ink mb-3">{label}</h3>}
+    <div className="space-y-3 text-[15px] text-muted leading-relaxed [&_strong]:text-ink [&_strong]:font-medium">
+      {children}
+    </div>
+  </div>
+);
+
 const ImpPage = () => (
-  <Section id="imp" title="IMPORTANT NOTICE">
-    <div className="max-w-3xl mx-auto mt-8 space-y-6">
-      
-      {/* Notice 1 - existing */}
-      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
-          I build setups based on what the owner asks for. I provide recommendations, but the final output is always their choice.
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
-          If you dislike a setup, don't judge my abilities for delivering what was requested. I'm not arguing about this or discussing it further.
-        </p>
-      </div>
+  <Section id="imp" title="Important notice" subtitle="Please read before hiring me.">
+    <div className="space-y-4">
+      <Notice label="Client decisions">
+        <p>I build setups based on what the owner asks for. I provide recommendations, but the final output is always their choice.</p>
+        <p>If you dislike a setup, don't judge my abilities for delivering what was requested. I'm not arguing about this or discussing it further.</p>
+      </Notice>
 
-      {/* Notice 2 - existing */}
-      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
-          Service Boundary
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
-          I am exclusively a <span className="text-white font-semibold">Configurator</span> and <span className="text-white font-semibold">Optimiser</span>. While Java Plugin Development is listed as a skill, it is <span className="text-white font-semibold">not a service I offer</span> to any server under any circumstances.
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
-          Pressuring or threatening me to write plugins will not be tolerated. Any threats made will be formally reported. This is non-negotiable.
-        </p>
-      </div>
+      <Notice label="Service boundary">
+        <p>I am exclusively a <strong>Configurator</strong> and <strong>Optimiser</strong>. While Java Plugin Development is listed as a skill, it is <strong>not a service I offer</strong> to any server under any circumstances.</p>
+        <p>Pressuring or threatening me to write plugins will not be tolerated. Any threats made will be formally reported. This is non-negotiable.</p>
+      </Notice>
 
-      {/* Notice 3 - new */}
-      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
-          Scope of Work
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
-          Hiring me as a developer does <span className="text-white font-semibold">not</span> give you the right to demand I learn skills outside my expertise. I will not be forced to acquire knowledge beyond what I already offer, unless it is something reasonably straightforward.
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
-          Any attempt to pressure me beyond this boundary falls under my <span className="text-white font-semibold">Terms of Service</span> and will be handled accordingly.
-        </p>
-      </div>
+      <Notice label="Scope of work">
+        <p>Hiring me as a developer does <strong>not</strong> give you the right to demand I learn skills outside my expertise. I will not be forced to acquire knowledge beyond what I already offer, unless it is something reasonably straightforward.</p>
+        <p>Any attempt to pressure me beyond this boundary falls under my <Link to="/tos" className="text-ink underline underline-offset-2 decoration-dim hover:decoration-ink">Terms of Service</Link> and will be handled accordingly.</p>
+      </Notice>
 
-      <div className="p-8 md:p-12 rounded-2xl border border-red-500/20 bg-red-500/5 relative overflow-hidden text-center">
-        <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-red-500/30 to-transparent"></div>
-        <p className="font-mono text-[10px] text-red-400/60 uppercase tracking-[0.3em] mb-6">
-          Similar Setups
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans mb-6">
-          If I am working on your server and another server at the same time, some configs or styles may look the <span className="text-white font-semibold">same</span>. This is because the owner gave me an example to follow, <span className="text-white font-semibold">not</span> because I copied anyone's work.
-        </p>
-        <p className="text-gray-300 text-base md:text-lg leading-relaxed font-sans font-medium">
-          Accusing me of copying, warning me, or telling me not to copy over this will <span className="text-white font-semibold">not be accepted or tolerated</span>. Please use common sense before raising it.
-        </p>
-      </div>
-
+      <Notice label="Similar setups">
+        <p>If I am working on your server and another server at the same time, some configs or styles may look the <strong>same</strong>. This is because the owner gave me an example to follow, <strong>not</strong> because I copied anyone's work.</p>
+        <p>Accusing me of copying, warning me, or telling me not to copy over this will <strong>not be accepted or tolerated</strong>. Please use common sense before raising it.</p>
+      </Notice>
     </div>
   </Section>
 );
@@ -273,21 +259,20 @@ const App: React.FC = () => {
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
-          <Route path="/imp" element={<ImpPage />} /> {/* NEW ROUTE ADDED HERE */}
-          
+          <Route path="/imp" element={<ImpPage />} />
           <Route path="/tos" element={
-            <LegalPage 
-              title="TERMS OF SERVICE" 
-              lastUpdated="April 17, 2026" 
-              data={TERMS_OF_SERVICE} 
+            <LegalPage
+              title="Terms of Service"
+              lastUpdated="April 17, 2026"
+              data={TERMS_OF_SERVICE}
               footer={TOS_RESERVATION_CLAUSE}
             />
           } />
           <Route path="/privacy" element={
-            <LegalPage 
-              title="PRIVACY POLICY" 
-              lastUpdated="April 17, 2026" 
-              data={PRIVACY_POLICY} 
+            <LegalPage
+              title="Privacy Policy"
+              lastUpdated="April 17, 2026"
+              data={PRIVACY_POLICY}
             />
           } />
         </Routes>
