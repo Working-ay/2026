@@ -10,14 +10,13 @@ import {
   SKILLS,
   REVIEWS,
   SOCIAL_LINKS,
-  SHOWCASE_ITEMS,
   TERMS_OF_SERVICE,
   PRIVACY_POLICY,
   TOS_RESERVATION_CLAUSE,
   GALLERY_IMAGES
 } from './constants';
 import { ProjectStatus } from './types';
-import { Github, Mail, MessageCircle, ArrowRight, ArrowUpRight } from 'lucide-react';
+import { Github, Mail, MessageCircle, ArrowRight } from 'lucide-react';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -46,14 +45,6 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
 const HomePage = () => (
   <section className="min-h-[calc(100vh-8rem)] flex items-center px-5">
     <div className="max-w-3xl w-full mx-auto fade-up">
-      <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full border border-line bg-surface text-xs text-muted mb-8">
-        <span className="relative flex w-2 h-2">
-          <span className="absolute inset-0 rounded-full bg-green-400 animate-ping opacity-60" />
-          <span className="relative w-2 h-2 rounded-full bg-green-400" />
-        </span>
-        Commissions are open
-      </div>
-
       <h1 className="font-serif text-5xl md:text-6xl tracking-tight leading-[1.1] text-ink">
         Hi, I'm <span className="text-accent">Ayrix</span>.
       </h1>
@@ -127,35 +118,6 @@ const ProjectsPage = () => {
     </Section>
   );
 };
-
-const ShowcasePage = () => (
-  <Section id="showcase" title="Showcase" subtitle="Plugins, websites and apps I've built.">
-    <div className="rounded-2xl border border-line bg-surface divide-y divide-line overflow-hidden">
-      {SHOWCASE_ITEMS.map((item, index) => {
-        const hasLink = item.link !== "#";
-        const Wrapper: any = hasLink ? 'a' : 'div';
-        return (
-          <Wrapper
-            key={`${item.title}-${index}`}
-            {...(hasLink ? { href: item.link, target: '_blank', rel: 'noopener noreferrer' } : {})}
-            className="group flex items-start gap-4 p-5 hover:bg-white/[0.03] transition-colors"
-          >
-            <div className="flex-1 min-w-0">
-              <div className="flex items-center gap-2 flex-wrap">
-                <h3 className="text-ink font-medium">{item.title}</h3>
-                <span className="text-[11px] text-dim border border-line px-1.5 py-px rounded-md">{item.type}</span>
-              </div>
-              <p className="text-sm text-muted leading-relaxed mt-1.5">{item.description}</p>
-            </div>
-            {hasLink && (
-              <ArrowUpRight size={18} className="text-dim group-hover:text-ink transition-colors shrink-0 mt-0.5" />
-            )}
-          </Wrapper>
-        );
-      })}
-    </div>
-  </Section>
-);
 
 const SkillsPage = () => (
   <Section id="skills" title="Skills" subtitle="Tools and technologies I work with day to day.">
@@ -255,7 +217,6 @@ const App: React.FC = () => {
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/projects" element={<ProjectsPage />} />
-          <Route path="/showcase" element={<ShowcasePage />} />
           <Route path="/skills" element={<SkillsPage />} />
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
