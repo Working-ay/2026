@@ -5,6 +5,7 @@ import { Section } from './components/Section';
 import { ProjectCard } from './components/ProjectCard';
 import { ReviewCard } from './components/ReviewCard';
 import { LegalPage } from './components/LegalPage';
+import { Hero } from './components/Hero';
 import {
   PROJECTS,
   SKILLS,
@@ -16,7 +17,7 @@ import {
   GALLERY_IMAGES
 } from './constants';
 import { ProjectStatus } from './types';
-import { Github, Mail, MessageCircle, ArrowRight } from 'lucide-react';
+import { Github, Mail, MessageCircle } from 'lucide-react';
 
 const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   return (
@@ -42,44 +43,7 @@ const Layout: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   );
 };
 
-const HomePage = () => (
-  <section className="min-h-[calc(100vh-8rem)] flex items-center px-5">
-    <div className="max-w-3xl w-full mx-auto fade-up">
-      <h1 className="font-serif text-5xl md:text-6xl tracking-tight leading-[1.1] text-ink">
-        Hi, I'm <span className="text-accent">Ayrix</span>.
-      </h1>
-
-      <p className="mt-6 text-lg text-muted leading-relaxed max-w-xl">
-        I set up, configure and optimise Minecraft networks, from full server setups and advanced plugin configuration to bug fixing and performance tuning.
-      </p>
-
-      <div className="flex flex-wrap gap-2 mt-8">
-        {['Configurator', 'Optimiser', 'SysAdmin'].map((role) => (
-          <span key={role} className="px-3 py-1 rounded-lg bg-surface border border-line text-sm text-muted">
-            {role}
-          </span>
-        ))}
-      </div>
-
-      <div className="flex flex-wrap gap-3 mt-10">
-        <Link
-          to="/projects"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-ink text-bg text-sm font-medium hover:bg-white transition-colors"
-        >
-          View projects <ArrowRight size={16} />
-        </Link>
-        <a
-          href={SOCIAL_LINKS.discord}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl border border-line text-sm text-ink hover:bg-white/5 transition-colors"
-        >
-          Contact on Discord
-        </a>
-      </div>
-    </div>
-  </section>
-);
+const HomePage = () => <Hero />;
 
 const GroupLabel: React.FC<{ children: React.ReactNode; count?: number }> = ({ children, count }) => (
   <div className="flex items-center gap-2 mb-4 text-sm text-dim">
