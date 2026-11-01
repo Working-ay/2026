@@ -1,6 +1,14 @@
 {
   "rewrites": [
     {
+      "source": "/i/:file",
+      "destination": "https://cdn.ayrixmc.cc/u/:file"
+    },
+    {
+      "source": "/zipline-api/:path*",
+      "destination": "https://cdn.ayrixmc.cc/api/:path*"
+    },
+    {
       "source": "/(.*)",
       "destination": "/index.html"
     }

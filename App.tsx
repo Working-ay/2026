@@ -6,6 +6,7 @@ import { ProjectCard } from './components/ProjectCard';
 import { ReviewCard } from './components/ReviewCard';
 import { LegalPage } from './components/LegalPage';
 import { Hero } from './components/Hero';
+import { UploadPage } from './components/UploadPage';
 import {
   PROJECTS,
   SKILLS,
@@ -185,6 +186,7 @@ const App: React.FC = () => {
           <Route path="/gallery" element={<GalleryPage />} />
           <Route path="/reviews" element={<ReviewsPage />} />
           <Route path="/imp" element={<ImpPage />} />
+          <Route path="/upload" element={<UploadPage />} />
           <Route path="/tos" element={
             <LegalPage
               title="Terms of Service"
